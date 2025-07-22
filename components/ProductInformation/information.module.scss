@@ -1,0 +1,108 @@
+:local {
+  .container {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+
+    h3 {
+      line-height: 53.42px;
+      margin-bottom: 0;
+      font-weight: 700;
+      font-size: 36px;
+      @media only screen and (max-width: 768px) {
+        font-size: 24px;
+        max-width: 70%;
+        line-height: 33.42px;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    p {
+      font-style: normal;
+      font-weight: 500;
+      margin-top: 16px;
+      line-height: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .demoGraph {
+      background-color: rgb(29, 29, 29);
+      display: flex;
+      flex-direction: column;
+      padding: 100px;
+      padding-bottom: 0;
+      margin-top: 75px;
+
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+      @media only screen and (max-width: 768px) {
+        padding: 50px;
+        //padding-bottom: 0;
+      }
+      .head {
+        position: absolute;
+        height: 100%;
+        width: 540px;
+        right: -260px;
+        top: 0;
+      }
+      .button {
+        margin-bottom: 50px;
+        margin-top: 50px;
+        z-index: 1;
+        width: 306px;
+        padding: 15px;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        @media only screen and (max-width: 768px) {
+          margin-bottom: 0;
+          width: 100%;
+        }
+      }
+      .detailsContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @media only screen and (max-width: 768px) {
+          justify-content: space-between;
+          align-items: initial;
+          flex-direction: column;
+        }
+
+        .details {
+          text-align: left;
+
+          label {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+          }
+          ul {
+            li {
+              margin-top: 10px;
+              margin-bottom: 10px;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+
+              svg {
+                margin-right: 16px;
+                width: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

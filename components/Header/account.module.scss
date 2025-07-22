@@ -1,0 +1,60 @@
+:local {
+  .menu {
+    display: flex;
+
+    gap: 5px;
+    margin-right: 20px;
+    .imageContainer {
+      border: 2px solid hsl(274, 79%, 66%);
+      box-shadow: 0px 4px 35px rgb(177 101 237 / 62%);
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      border-radius: 25px;
+      position: relative;
+      cursor: pointer;
+
+      .image {
+        position: absolute;
+        text-transform: uppercase;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+  .navigation {
+    background-color: transparent;
+    border-top: 1px solid #b165ed;
+    border-bottom: 1px solid #b165ed;
+
+    height: auto;
+    width: 100%;
+    position: absolute;
+  
+
+    right: 0%;
+
+    .list {
+      margin: 0;
+      display: flex;
+      gap: 25px;
+      justify-content: flex-end;
+      width: 100%;
+      li {
+        font-size: 14px;
+        padding: 15px 0;
+        cursor: pointer;
+        font-weight: bold;
+        font-style: italic;
+      }
+    }
+  }
+  .backgroundColor {
+    background-color: rgb(18, 18, 18);
+  }
+}

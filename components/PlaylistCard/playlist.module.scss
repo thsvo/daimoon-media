@@ -1,0 +1,62 @@
+:local {
+  .card {
+    width: 187px;
+    height: 270px;
+    left: 1138px;
+    top: 1434px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 4.93069px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all ease-in 0.1s;
+
+    &:hover {
+      transition: all ease-in 0.1s;
+      transform: scale(1.01);
+    }
+
+    .imageContainer {
+      width: 100%;
+      height: 150px;
+      position: relative;
+    }
+
+    .contentContainer {
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 150px);
+      justify-content: space-between;
+
+      .header {
+        margin-top: 10px;
+        h4 {
+          margin: 0;
+          font-weight: 700;
+          font-size: 12px;
+
+          margin-bottom: 0;
+        }
+        span {
+          font-weight: 500;
+          font-size: 12px;
+        }
+      }
+      span {
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+  }
+  .card_approved {
+    border: 1px solid #1ed760;
+  }
+  .card_pending {
+    border: 1px solid #ffcc00;
+  }
+  .card_unpitched {
+    opacity: 0.3;
+    border: 1px solid #8d8d8d;
+  }
+}

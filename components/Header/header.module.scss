@@ -1,0 +1,447 @@
+:local {
+  .headerContainer {
+    background-color: transparent;
+    z-index: 10;
+    width: 100%;
+
+    .logo {
+      cursor: pointer;
+      position: relative;
+      width: 75px;
+      padding-top:10px;
+      &:hover {
+        .logo_shadow {
+          transition: all 0.4s ease-in-out; // Added transition
+          box-shadow: 0px 0px 20px 5px rgb(177, 101, 237);
+        }
+      }
+      .logo_shadow {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.4s ease-in-out; // Added transition
+        border-radius: 100%;
+        z-index: 0;
+      }
+      svg {
+        position: relative;
+        z-index: 1;
+      }
+    }
+    nav.navigation {
+      display: flex;
+      align-items: center;
+
+      .cartIcon {
+        cursor: pointer;
+
+        position: relative;
+
+        .hasCampaign {
+          border-radius: 8px;
+          background-color: #b165ed;
+          position: absolute;
+          top: -3px;
+          right: -5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 15px;
+          height: 15px;
+          span {
+            font-size: 8px;
+            font-style: normal;
+          }
+        }
+        &:hover {
+          transition: all 0.3;
+          transform: scale(1.05);
+        }
+        .total {
+          position: absolute;
+          bottom: -30px;
+          width: 100px;
+          left: -20px;
+        }
+      }
+
+      div {
+        li {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: #fdfdfd;
+          list-style-type: none;
+          //margin-right: 25px;
+          padding: 12px;
+          cursor: pointer;
+          display: flex;
+          svg {
+            margin-left: 10px;
+          }
+        }
+
+        .modal {
+          z-index: 2;
+          position: absolute;
+          background-color: rgb(37, 37, 37);
+          padding: 20px 30px;
+          border-radius: 0 16px 16px 16px;
+          li {
+            padding-top: 15px;
+            &:hover {
+              color: #b165ed;
+            }
+          }
+          .navigation {
+            &:hover {
+              color: #b165ed;
+              svg {
+                fill: #b165ed;
+                path {
+                  fill: #b165ed;
+                }
+              }
+            }
+          }
+        }
+        .modal.modal__inverted {
+          right: 24px;
+          border-radius: 16px 0 16px 16px;
+        }
+      }
+
+      .category {
+        background-color: transparent;
+
+        &:hover {
+          background-color: rgb(37, 37, 37);
+          border-radius: 16px 16px 0px 0px;
+          animation: slide 0.1s;
+          li {
+            color: #b165ed;
+          }
+        }
+
+        @keyframes slide {
+          0% {
+            background-color: transparent;
+          }
+          100% {
+            background-color: rgb(37, 37, 37);
+          }
+        }
+      }
+    }
+
+    .container {
+      background-color: rgb(18, 18, 18);
+      width: 100%;
+      //position: absolute;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        position: relative;
+        justify-content: initial;
+
+        padding: 5px;
+      }
+      //padding: 25px;
+
+      .logo {
+        cursor: pointer;
+        transition: all ease-in-out 0.2s;
+        position: relative;
+        width: 75px;
+        &:hover {
+          transition: all ease-in-out 0.2s;
+          z-index: 2;
+          transform: scale(1.1);
+        }
+      }
+      .navigation {
+        position: absolute;
+        //right: 70px;
+        right: 0;
+        display: flex;
+        align-items: center;
+
+        .cartIcon {
+          //margin-right: 50px;
+          cursor: pointer;
+
+          position: relative;
+
+          .hasCampaign {
+            border-radius: 8px;
+            background-color: #b165ed;
+            position: absolute;
+            top: -3px;
+            right: -5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15px;
+            height: 15px;
+            span {
+              font-size: 8px;
+              font-style: normal;
+            }
+          }
+          &:hover {
+            transition: all 0.3;
+            transform: scale(1.05);
+          }
+          .total {
+            position: absolute;
+            bottom: -30px;
+            width: 100px;
+            left: -20px;
+          }
+        }
+
+        button {
+          border-radius: 5px;
+          background-color: #b165ed;
+          border: none;
+          color: #fdfdfd;
+          font-weight: 700;
+          font-size: 14px;
+          width: 143px;
+          height: 43px;
+          margin-right: 35px;
+        }
+        a {
+          font-weight: 700;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .header_fixed {
+    background-color: rgb(18, 18, 18);
+    position: fixed;
+    z-index: 10;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    position: fixed;
+    z-index: 3;
+    .warning {
+      padding: 15px;
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      width: 400px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      border-radius: 5px;
+      border: 2px solid #b165ed;
+      transform: translate(-50%, -50%);
+      background-color: #121212;
+
+      @media only screen and (max-width: 768px) {
+        width: calc(100% - 45px);
+      }
+      .buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .button {
+          width: 143px;
+          text-align: center;
+          padding: 12px;
+          border-radius: 5px;
+          font-weight: 700;
+          font-size: 14px;
+          background-color: transparent;
+          border: 2px solid #b165ed;
+          color: #fdfdfd;
+          cursor: pointer;
+          transition: ease-in-out 0.2s;
+          &:hover {
+            transition: ease-in-out 0.2s;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  .mobileHeader {
+    width: 100%;
+    padding: 25px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    top: 0;
+    .logo {
+      cursor: pointer;
+      position: relative;
+      width: 75px;
+      .logo_shadow {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 0px 20px 5px rgb(177, 101, 237);
+        transition: all 0.1s ease-in-out; // Added transition
+        border-radius: 100%;
+        z-index: 0;
+      }
+      svg {
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .hamburger {
+      position: relative;
+      z-index: 1;
+    }
+    .cartIcon {
+      //margin-right: 50px;
+      cursor: pointer;
+
+      position: relative;
+
+      .hasCampaign {
+        border-radius: 8px;
+        background-color: #b165ed;
+        position: absolute;
+        top: -3px;
+        right: -5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 15px;
+        span {
+          font-size: 8px;
+          font-style: normal;
+        }
+      }
+      &:hover {
+        transition: all 0.3;
+        transform: scale(1.05);
+      }
+      .total {
+        position: absolute;
+        bottom: -30px;
+        width: 100px;
+        left: -20px;
+      }
+    }
+  }
+
+  .menuModalOverlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .menuModalContainer {
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    background-color: #121212;
+    z-index: 5;
+    padding: 25px;
+
+    .closeBtn {
+      display: flex;
+
+      justify-content: flex-end;
+    }
+
+    .menuItems {
+      width: 100%;
+      border-top: 5px solid #b165ed;
+      margin-top: 25px;
+      height: 70vh;
+
+      .navigation {
+        margin-top: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .buttonContainer {
+          margin: 25px 0;
+        }
+
+        li {
+          list-style-type: none;
+          font-size: 26px;
+          margin-bottom: 25px;
+        }
+
+        .subItems {
+          padding-left: 10px;
+          li {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    .quoteContainer {
+      border-top: 5px solid #b165ed;
+      p {
+        font-style: italic;
+      }
+    }
+  }
+
+  .notificationHeader__neutral {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: rgba(177, 101, 237, 0.3);
+    border: 1px solid #b165ed;
+  }
+
+  .notificationHeader__error {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: rgba(238, 0, 0, 0.3);
+    border: 1px solid #e00;
+  }
+
+  .notificationHeader__success {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: rgba(29, 185, 84, 0.3);
+    border: 1px solid rgb(29, 185, 84);
+  }
+  .notificationHeader__warning {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: rgb(255, 85, 0, 0.3);
+    border: 1px solid rgb(255, 85, 0);
+  }
+}

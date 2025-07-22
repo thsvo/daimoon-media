@@ -1,0 +1,120 @@
+:local {
+  .container {
+    width: 100%;
+    max-width: 100vw;
+    background-color: rgb(32, 32, 32);
+    border-radius: 3px;
+    padding: 25px;
+
+    .createContainer {
+      width: 100%;
+
+      border-radius: 3px;
+
+      form {
+        display: flex;
+
+        .item {
+          height: 40px;
+          width: 150px;
+          display: flex;
+
+          input,
+          select {
+            height: 100%;
+            width: 100%;
+            border: rgb(32, 32, 32) 1px solid;
+            color: white;
+            background-color: #363636;
+            padding: 0 0px 0px 15px;
+            font-weight: bold;
+            font-size: 14px;
+          }
+        }
+        button {
+          background-color: #b165ed;
+          color: white;
+          border-radius: 10px;
+          font-weight: 700;
+          font-size: 14px;
+          border: none;
+          width: 100px;
+          border-radius: 0px 10px 10px 0px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .overviewContainer {
+      table {
+        padding: 0 25px;
+        border-collapse: collapse;
+        width: 100%;
+
+        tr {
+          th,
+          td {
+            padding: 8px;
+            text-align: center;
+            max-width: 200px;
+            overflow: hidden;
+          }
+          th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #b165ed;
+            color: white;
+          }
+          td {
+            font-size: 16px;
+            font-weight: bold;
+            font-style: italic;
+            color: hsla(0, 0%, 100%, 0.4);
+          }
+
+          .selectBox {
+            display: flex;
+            position: relative;
+            select {
+              width: 100%;
+              height: 100%;
+              appearance: none;
+              background-color: transparent;
+              border: none;
+              color: white;
+
+              font-size: 18px;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            svg {
+              color: white;
+              position: absolute;
+              right: 10px;
+              top: 0;
+              bottom: 0;
+              margin: auto 0;
+            }
+          }
+
+          .tableHeader {
+            border-radius: 25px;
+          }
+        }
+        tr:nth-child(even) {
+          background-color: #363636;
+        }
+
+        tr:hover {
+          background-color: transparent;
+          td {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

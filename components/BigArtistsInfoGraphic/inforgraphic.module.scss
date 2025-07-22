@@ -1,0 +1,97 @@
+:local {
+  .container {
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 75px;
+    position: relative;
+
+    @media only screen and (max-width: 768px) {
+      padding: 25px;
+    }
+
+    h3 {
+      font-size: 30px;
+      line-height: 148.4%;
+      margin-top: 0;
+    }
+
+    .categories {
+      display: flex;
+      gap: 15px;
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+      .item {
+        width: 50%;
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+        .heading {
+          background: rgba(54, 54, 54, 1);
+          border-radius: 33px;
+          padding: 30px;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          @media only screen and (max-width: 768px) {
+            padding: 20px;
+          }
+
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+          span {
+            margin-left: 25px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 112%;
+
+            b {
+              color: rgba(177, 101, 237, 1);
+            }
+          }
+        }
+
+        .subText {
+          padding: 0 30px;
+          font-weight: 800;
+          font-size: 14px;
+          line-height: 123%;
+        }
+      }
+    }
+    .containerCTA {
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      @media only screen and (max-width: 768px) {
+        position: static;
+        justify-content: flex-end;
+      }
+      span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 123%;
+        color: #b165ed;
+      }
+
+      .cta {
+        background: rgba(54, 54, 54, 1);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

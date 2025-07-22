@@ -1,0 +1,36 @@
+:local {
+  .container {
+    position: relative;
+
+    .imageContainer {
+      position: absolute;
+      top: 50%; /* position the top  edge of the element at the middle of the parent */
+
+      transform: translate(0, -50%);
+    }
+
+    .textContainer {
+      background: #252525;
+      border-radius: 10px;
+      padding: 100px;
+      width: 600px;
+
+      @media only screen and (max-width: 768px) {
+        padding: 25px;
+      }
+
+      h3 {
+        color: white;
+      }
+
+      .button {
+        margin-top: 50px;
+        width: 100%;
+
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

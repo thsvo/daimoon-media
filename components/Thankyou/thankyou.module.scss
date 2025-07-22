@@ -1,0 +1,299 @@
+:local {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 170px;
+    position: relative;
+    .spotlightContainer {
+      position: absolute;
+      left: -25%;
+      z-index: -1;
+    }
+    .imageContainer {
+      position: absolute;
+      right: -80%;
+      top: 0;
+    }
+  }
+  .heroText {
+    max-width: 770px;
+
+    text-align: center;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+    h3 {
+      font-weight: 800;
+      font-size: 50px;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 36px;
+      }
+    }
+    p {
+      font-weight: 600;
+      font-size: 22px;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+    .labelText {
+      display: block;
+      font-weight: 400;
+      font-size: 18px;
+      color: rgb(113, 113, 113);
+      b {
+        color: rgba(177, 101, 237, 1);
+      }
+    }
+  }
+
+  .steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 100px;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    &:after {
+      content: '';
+      border: 2px solid #fdfdfd;
+      width: 77%;
+      position: absolute;
+      z-index: -1;
+      top: 25%;
+      left: 10%;
+      transform: translateY(-30%);
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 150px;
+
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 25px;
+      }
+
+      .fulfilled {
+        background: #b165ed;
+        width: 71px;
+        height: 71px;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .partially {
+        border: 5px dashed #b165ed;
+        width: 71px;
+        height: 71px;
+        border-radius: 40px;
+
+        background: rgb(18, 18, 18);
+      }
+      .next {
+        width: 71px;
+        height: 71px;
+        position: relative;
+
+        &:after {
+          content: '';
+          width: 36px;
+          height: 36px;
+          background: #fdfdfd;
+          border-radius: 40px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .item_text {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 24px;
+        color: #fdfdfd;
+        display: block;
+
+        text-align: center;
+      }
+    }
+  }
+  .mainBody {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    margin-top: 180px;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    .cart {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 60px 140px;
+      max-width: 700px;
+      width: 100%;
+      @media only screen and (max-width: 768px) {
+        padding: 20px 20px;
+      }
+      .cartHeading {
+        text-align: center;
+
+        h4 {
+          font-weight: 800;
+          font-size: 50px;
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+        span {
+          font-weight: 800;
+          font-size: 25px;
+          color: rgba(151, 151, 151, 1);
+        }
+      }
+      .cartBody {
+        margin-top: 30px;
+        .serviceSection {
+          margin-bottom: 20px;
+          padding: 20px;
+
+          position: relative;
+          .serviceSection__title {
+            text-transform: capitalize;
+            position: absolute;
+            top: -13px;
+            z-index: 1;
+            background: rgba(37, 37, 37);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+        .serviceSection.serviceSection_spotify {
+          border: 1px solid #ff0050;
+          border-radius: 6px;
+          .serviceSection__title {
+            color: #ff0050;
+          }
+        }
+        .serviceSection.serviceSection_spotify {
+          border: 1px solid #1ed760;
+          border-radius: 6px;
+          .serviceSection__title {
+            color: #1ed760;
+          }
+        }
+        .serviceSection.serviceSection_youtube {
+          border: 1px solid #e00;
+          border-radius: 6px;
+          .serviceSection__title {
+            color: #e00;
+          }
+        }
+        .serviceSection.serviceSection_soundcloud {
+          border: 1px solid #ff5502;
+          border-radius: 6px;
+          .serviceSection__title {
+            color: #ff5502;
+          }
+        }
+      }
+      .cartTotal {
+        .discount {
+          .couponContainer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            span {
+              font-size: 12px;
+            }
+          }
+          span {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+        .total {
+          display: flex;
+          justify-content: space-between;
+          span {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+          }
+        }
+        .taxes {
+          display: flex;
+          justify-content: space-between;
+          span {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+      .invoice {
+        text-align: center;
+        letter-spacing: 0.02em;
+        font-weight: 700;
+        font-size: 12px;
+        color: #b165ed;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+    }
+    .info {
+      max-width: 520px;
+      position: relative;
+      z-index: 1;
+
+      .infoItem {
+        h4 {
+          font-weight: 700;
+          font-size: 24px;
+          letter-spacing: 0.02em;
+        }
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 126%;
+          letter-spacing: 0.02em;
+          margin-bottom: 30px;
+        }
+
+        .button {
+          background: #b165ed;
+          border-radius: 10px;
+          padding: 13px 23px;
+          color: #fdfdfd;
+          font-weight: 700;
+          font-size: 12px;
+          display: inline-block;
+          cursor: pointer;
+          transition: ease-in 0.1s;
+
+          &:hover {
+            transform: scale(1.05);
+            transition: ease-in 0.1s;
+          }
+        }
+      }
+    }
+  }
+}

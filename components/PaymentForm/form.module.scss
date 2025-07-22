@@ -1,0 +1,336 @@
+:local {
+  .paymentMethods {
+    margin-top: 25px;
+    padding-top: 13px;
+    border-top: 0.7px solid rgba(255, 255, 255, 0.13);
+
+    ul {
+      .method {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .details {
+          .checkboxContainer {
+            display: flex;
+            flex: 50%;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 10px;
+
+            .checkbox {
+              /* Customize the label (the container) */
+
+              width: 14px;
+              height: 14px;
+              border: 1px solid #fdfdfd;
+              position: relative;
+              box-sizing: border-box;
+              border-radius: 10px;
+
+              cursor: pointer;
+
+              /* Hide the browser's default checkbox */
+              input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+              }
+              .checkmark {
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                height: 8px;
+                width: 8px;
+                border-radius: 10px;
+                background-color: #fdfdfd;
+                margin-left: 0;
+              }
+              &:hover {
+                background-color: rgb(107, 107, 107);
+              }
+            }
+
+            span {
+              margin-left: 11px;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 23px;
+              font-style: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+  .formFields {
+    display: flex;
+    flex-direction: column;
+    padding-top: 13px;
+    border-top: 0.7px solid rgba(255, 255, 255, 0.13);
+
+    .textarea {
+      border-radius: 10px;
+      padding-left: 21px;
+      padding-top: 21px;
+
+      background: rgb(54, 54, 54);
+      width: 100%;
+      height: 80px;
+      border: none;
+
+      color: #fdfdfd;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    span {
+      margin-top: 20px;
+    }
+    .inputFields {
+      width: 100%;
+
+      .checkboxContainer {
+        margin-top: 20px;
+        .checkboxItem {
+          display: flex;
+          flex: 50%;
+          align-items: center;
+          cursor: pointer;
+          margin-top: 10px;
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+
+          .checkbox {
+            /* Customize the label (the container) */
+
+            width: 20px;
+            height: 20px;
+            border: 1px solid #fdfdfd;
+            position: relative;
+            box-sizing: border-box;
+            border-radius: 4px;
+
+            cursor: pointer;
+
+            /* Hide the browser's default checkbox */
+            input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+            }
+            .checkmark {
+              position: absolute;
+              top: -1px;
+              left: -1px;
+              height: 20px;
+              width: 20px;
+              border-radius: 4px;
+              background-color: #1db954;
+              margin-left: 0;
+            }
+            &:hover {
+              background-color: rgb(107, 107, 107);
+            }
+          }
+          .checkbox_empty {
+            border: 1px red solid;
+          }
+          span {
+            margin-top: 0;
+            margin-left: 14px;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 15px;
+
+            b {
+              color: #b165ed;
+            }
+          }
+        }
+      }
+
+      .businessContainer {
+        margin-top: 28px;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        @media only screen and (max-width: 768px) {
+          flex-direction: column;
+          margin-bottom: 10px;
+        }
+        div .input.input_large {
+          width: 100%;
+        }
+        div {
+          position: relative;
+          @media only screen and (max-width: 768px) {
+            margin-bottom: 10px;
+          }
+          .input {
+            width: 284px;
+            height: 59px;
+            border-radius: 10px;
+            background-color: rgb(54, 54, 54);
+            border: none;
+            color: #fdfdfd;
+            padding-left: 21px;
+            @media only screen and (max-width: 768px) {
+              width: 100%;
+            }
+          }
+          .fieldLoadingContainer {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translate(0, -50%);
+          }
+          .input.input_error {
+            border: 1px red solid;
+          }
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          span {
+            margin-top: 15px;
+            font-size: 14px;
+            display: block;
+          }
+        }
+      }
+    }
+    .input {
+      width: 284px;
+      height: 59px;
+      border-radius: 10px;
+      background-color: rgb(54, 54, 54);
+      border: none;
+      color: #fdfdfd;
+      padding-left: 21px;
+    }
+
+    .countryField {
+      width: 284px;
+      position: relative;
+      .input {
+        width: 100%;
+        appearance: none;
+      }
+
+      svg {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+
+        transform: translateY(-50%);
+        path {
+          fill: #fdfdfd;
+        }
+      }
+    }
+
+    .couponContainer {
+      position: relative;
+
+      .couponLoader {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .textarea:focus,
+    .input:focus {
+      border: #b165ed;
+      outline: none;
+    }
+    p {
+      margin-top: 15px;
+    }
+    .couponContainer {
+      .coupon {
+        margin-top: 0;
+        border-radius: 6px;
+        background-color: #363636;
+        width: auto;
+        padding: 10px;
+        margin-right: 15px;
+        display: inline-block;
+        box-shadow: 5px 5px 1px black;
+        transition: all ease-in-out 0.2s;
+
+        &:hover {
+          box-shadow: none;
+          transition: all ease-in-out 0.2s;
+        }
+      }
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    .backButton {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 56px;
+      width: 56px;
+      border-radius: 6px;
+      border: 1px solid #b165ed;
+      margin-right: 20px;
+      @media only screen and (max-width: 768px) {
+        height: 45px;
+        width: 45px;
+      }
+    }
+
+    .checkoutButton {
+      width: 285px;
+      height: 56px;
+      background-color: #b165ed;
+      border: none;
+      color: #fdfdfd;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media only screen and (max-width: 768px) {
+        flex: 1;
+        height: 45px;
+      }
+    }
+  }
+  .securePayment {
+    display: block;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .checkoutButton:disabled,
+  .checkoutButton[disabled] {
+    opacity: 0.3;
+  }
+}

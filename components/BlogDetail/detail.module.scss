@@ -1,0 +1,79 @@
+:local {
+  .blogWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 180px);
+    position: relative;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .ImageContainer {
+      width: 100%;
+      height: 500px;
+      position: relative;
+
+      @media only screen and (max-width: 768px) {
+        height: 250px;
+      }
+    }
+    .ContentBody {
+      position: relative;
+
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .shareContainer {
+        position: absolute;
+        left: 50px;
+        top: 25px;
+
+        @media only screen and (max-width: 768px) {
+          display: flex;
+          position: initial;
+          flex-direction: column;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          @media only screen and (max-width: 768px) {
+            flex-direction: row;
+            justify-content: initial;
+          }
+
+          li {
+            @media only screen and (max-width: 768px) {
+              margin-right: 25px;
+            }
+            svg {
+              width: 15px;
+            }
+          }
+        }
+      }
+      .ContentContainer {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 360px);
+
+        p {
+          font-size: 19px;
+
+          @media only screen and (max-width: 768px) {
+            font-size: 16px;
+          }
+        }
+
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

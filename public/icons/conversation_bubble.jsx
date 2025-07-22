@@ -1,0 +1,30 @@
+const ConversationBubble = () => {
+  return (
+    <svg
+      width='20'
+      height='20'
+      viewBox='0 0 20 20'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        fill-rule='evenodd'
+        clip-rule='evenodd'
+        d='M6.29998 14.1586L2.71 16.3L3.32629 12.6239C1.83281 11.3921 1 9.6857 1 7.8C1 4.04446 4.3033 1 9.55 1C14.7967 1 18.1 4.04446 18.1 7.8C18.1 11.5555 14.7967 14.6 9.55 14.6C8.36171 14.6 7.2731 14.4438 6.29998 14.1586Z'
+        stroke='#8E8E8E'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      />
+      <path
+        d='M17.7 10C18.537 10.8311 19 11.9323 19 13.1402C19 14.4401 18.4637 15.6165 17.502 16.4657L17.8988 19L15.5871 17.5237C14.9605 17.7204 14.2595 17.828 13.4943 17.828C10.7385 17.828 8.81525 16.4316 8.19995 14.5117'
+        stroke='#8E8E8E'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      />
+    </svg>
+  );
+};
+
+export default ConversationBubble;

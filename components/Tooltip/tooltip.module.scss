@@ -1,0 +1,53 @@
+:local {
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    height: 20px;
+
+    .tooltiptext {
+      opacity: 0;
+      visibility: hidden;
+
+      transition: opacity 0.3s;
+      min-width: 300px;
+      background-color: rgba(45, 45, 45, 1);
+      color: rgba(255, 255, 255, 1);
+      text-align: left;
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+
+      bottom: 30px;
+      left: 50%;
+      margin-left: -150px;
+
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      z-index: 3;
+
+      label {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .tooltip .tooltiptext::after {
+    content: ' ';
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(45, 45, 45, 1) transparent transparent transparent;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+}

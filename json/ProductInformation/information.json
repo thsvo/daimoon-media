@@ -1,0 +1,77 @@
+[
+  {
+    "service": "spotify",
+    "details": [
+      {
+        "name": "Spotify experts",
+        "list": [
+          "Premium curator relationships",
+          "Verified playlists only",
+          "Team of artists & music specialists",
+          "Overseeing 50k+ streams daily",
+          "Reaching 100M+ playlist followers"
+        ]
+      },
+      {
+        "name": "Built for you",
+        "list": [
+          "Campaign builder for flexibility",
+          "Private dashboard for campaign tracking",
+          "Dedicated campaign managers",
+          "Response time within 24 hours",
+          "Campaigns begin at $197.00"
+        ]
+      }
+    ]
+  },
+  {
+    "service": "youtube",
+    "details": [
+      {
+        "name": "YouTube experts",
+        "list": [
+          "Millions of views delivered",
+          "6 figure advertising experience",
+          "Exceptional interest targeting",
+          "Artists & music industry vision",
+          "Years of YouTube expertise"
+        ]
+      },
+      {
+        "name": "Built for you",
+        "list": [
+          "Campaign builder for flexibility",
+          "Private dashboard for campaign tracking",
+          "Dedicated campaign managers",
+          "Response time within 24 hours",
+          "Campaigns begin at $127"
+        ]
+      }
+    ]
+  },
+  {
+    "service": "soundcloud",
+    "details": [
+      {
+        "name": "SoundCloud experts",
+        "list": [
+          "Exclusive channel access",
+          "Reaching key A&Rs",
+          "All genre coverage",
+          "Overseeing 20k+ streams daily",
+          "5 billion+ followers reached"
+        ]
+      },
+      {
+        "name": "Built for you",
+        "list": [
+          "Campaign builder for flexibility",
+          "Private dashboard for campaign tracking",
+          "Dedicated campaign managers",
+          "Response time within 24 hours",
+          "Campaigns begin at $69,99"
+        ]
+      }
+    ]
+  }
+]

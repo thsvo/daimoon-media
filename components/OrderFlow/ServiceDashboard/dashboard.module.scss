@@ -1,0 +1,285 @@
+:local {
+  .dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .searchContainer {
+      border-radius: 35px;
+      max-width: 380px;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .altText {
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+
+      u {
+        margin-right: 10px;
+      }
+    }
+    .campaignGrid {
+      margin-top: 60px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+
+      @media only screen and (max-width: 768px) {
+        //margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-around;
+      }
+
+      .CampaignBox {
+        width: 265px;
+        min-height: 390px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 6px;
+        padding: 21px;
+        border: transparent 2px solid;
+        position: relative;
+
+        @media only screen and (max-width: 768px) {
+          margin-right: 0px;
+          width: 165px;
+          height: 270px;
+          min-height: initial;
+          padding: 10px;
+        }
+
+        .pre_release {
+          opacity: 0.2;
+        }
+
+        .trackThumbNail {
+          width: 100%;
+          height: 223px;
+          position: relative;
+          background-color: rgb(38, 38, 38);
+          border-radius: 6px;
+
+          @media only screen and (max-width: 768px) {
+            height: 120px;
+          }
+
+          .image {
+            border-radius: 6px;
+            object-fit: contain;
+          }
+
+          .trackThumbNail__label {
+            width: 62px;
+            height: 49px;
+            border-radius: 6px 0px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 0;
+            bottom: 0;
+
+            svg {
+              width: 22px;
+              height: 22px;
+            }
+          }
+          .trackThumbNail__label.spotify {
+            background-color: #1ed760;
+          }
+          .trackThumbNail__label.youtube {
+            background-color: #ff0000;
+          }
+          .trackThumbNail__label.soundcloud {
+            background-color: #ff5502;
+          }
+        }
+        .trackDetails {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          padding-bottom: 18px;
+          padding-top: 10px;
+          h5 {
+            margin: 0;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 700;
+
+            @media only screen and (max-width: 768px) {
+              font-size: 16px;
+            }
+          }
+          span {
+            font-size: 16px;
+            font-weight: 500;
+
+            @media only screen and (max-width: 768px) {
+              font-size: 14px;
+            }
+          }
+        }
+        .trackEdit {
+          margin-top: 16px;
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          position: relative;
+          z-index: 1;
+          div {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            &:hover {
+              transition: all 0.3;
+              transform: scale(1.05);
+            }
+          }
+          div:nth-child(2) {
+            margin-left: 10px;
+          }
+        }
+        .addCampaignContent {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+
+          .addCampaign {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            width: 81px;
+            height: 81px;
+            font-size: 62px;
+            text-align: center;
+          }
+          .textContainer {
+            margin-top: 22px;
+            font-size: 12px;
+
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      .CampaignBox.CampaignBox__dummy:hover {
+        background: rgba(255, 255, 255, 0.12);
+        cursor: pointer;
+      }
+      .CampaignBox.CampaignBox__Spotify {
+        border: #1ed760 2px solid;
+      }
+      .CampaignBox.CampaignBox__Youtube {
+        border: #ff0000 2px solid;
+      }
+      .CampaignBox.CampaignBox__Soundcloud {
+        border: #ff5502 2px solid;
+      }
+      .CampaignBox.CampaignBox__Tiktok {
+        border: #ff0050 2px solid;
+      }
+      .CampaignBox.CampaignBox__campaignSelected::after {
+        content: '✔';
+        font-size: 40px;
+        color: #fdfdfd;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media only screen and (max-width: 768px) {
+          font-size: 24px;
+        }
+      }
+      .CampaignBox.CampaignBox__Spotify.CampaignBox__campaignSelected::before {
+        background-color: rgb(30, 215, 96, 0.5);
+        content: '';
+        position: absolute;
+
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .CampaignBox.CampaignBox__Youtube.CampaignBox__campaignSelected::before {
+        content: '';
+        background-color: rgb(255, 0, 0, 0.5);
+
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .CampaignBox.CampaignBox__Soundcloud.CampaignBox__campaignSelected::before {
+        content: '';
+        background-color: rgb(255, 85, 2, 0.5);
+
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .button {
+      width: 389px;
+      height: 56px;
+      color: #fdfdfd;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19.5px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 37px;
+      margin-bottom: 37px;
+      cursor: pointer;
+
+      @media only screen and (max-width: 768px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        margin-bottom: 0;
+        margin-top: 0;
+        border-radius: 0;
+        z-index: 1000;
+        padding: 15px;
+        padding-bottom: max(15px, env(safe-area-inset-bottom));
+        font-size: 18px;
+        line-height: 22px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .button__spotify {
+      background-color: #1db954;
+    }
+    .button__youtube {
+      background-color: #e00;
+    }
+    .button__soundcloud {
+      background-color: #f50;
+    }
+    .button__tiktok {
+      background-color: #ff0050;
+    }
+  }
+}

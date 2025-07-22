@@ -1,0 +1,12 @@
+Sitemap: https://domain.com/api/posts-sitemap
+
+User-agent: *
+Disallow: /login
+Disallow: /api/*
+Disallow: /accounts/*
+Disallow: /questioniar
+Disallow: /welcome
+Disallow: /cart/*
+
+User-agent: *
+Allow: /*

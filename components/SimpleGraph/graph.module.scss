@@ -1,0 +1,55 @@
+:local {
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .graphHeader {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      .head {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      .legend {
+        display: flex;
+        gap: 15px;
+        span {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 25px;
+
+          color: rgba(255, 255, 255, 0.3);
+          position: relative;
+          &:before {
+            margin-right: 5px;
+            content: '';
+            display: inline-block;
+            background-color: #1ed760;
+            width: 9px;
+            height: 9px;
+            border-radius: 20px;
+          }
+        }
+        span:nth-of-type(2) {
+          &:before {
+            margin-right: 5px;
+            content: '';
+            display: inline-block;
+            background-color: #b165ed;
+            width: 9px;
+            height: 9px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+    canvas {
+      max-height: 100%;
+    }
+  }
+}

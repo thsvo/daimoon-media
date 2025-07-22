@@ -1,0 +1,342 @@
+:local {
+  
+  .spotlight {
+    position: absolute;
+
+    top: -30%;
+    left: -20%;
+    z-index: -1;
+  }
+  .HeroContainer {
+    margin-top: 50px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-evenly;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 0px;
+    }
+    .campaignPreviews {
+      width: 50%;
+      max-width: 700px;
+      position: relative;
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+
+      .CampaignContent {
+        font-size: 16px;
+        font-weight: 700;
+        position: relative;
+
+        .likeCounter {
+          position: absolute;
+          right: 0;
+          font-weight: 500;
+          font-size: 14px;
+          color: #b2b2b2;
+          display: flex;
+          justify-content: center;
+          svg {
+            margin-right: 12px;
+          }
+        }
+
+        span {
+          float: left;
+          clear: left;
+        }
+        span:nth-of-type(2) {
+          margin-top: 5px;
+          font-weight: 500;
+        }
+      }
+
+      .soundCloud {
+        width: 250px;
+        height: 250px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 6.15789px;
+        margin-right: 30px;
+        padding: 20px;
+        //box-shadow: none;
+        transition: box-shadow 0.2s;
+        -webkit-transition: box-shadow 0.2s;
+        .ImageContainer {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          .wave {
+            top: 50%;
+            position: absolute;
+            transform: translate(0, -50%);
+            mix-blend-mode: lighten;
+            width: 100%;
+            height: 100px;
+          }
+          .content {
+            position: absolute;
+            top: 26px;
+            left: 26px;
+          }
+        }
+      }
+      .soundCloud.soundCloud__active {
+        box-shadow: 7px 7px 1px #f50;
+        background: rgba(255, 255, 255, 0.15);
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+      }
+      .youtube {
+        width: 324px;
+        height: 261px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 6.15789px;
+        margin-top: 60px;
+        padding: 20px;
+        .ImageContainer {
+          width: 100%;
+          height: 100%;
+          max-height: 148px;
+          position: relative;
+
+          video {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .CampaignContent {
+          margin-top: 26px;
+        }
+      }
+      .youtube.youtube__active {
+        box-shadow: 7px 7px 1px #e00;
+        background: rgba(255, 255, 255, 0.15);
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+      }
+      .normal {
+        width: 600px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 6.15789px;
+        padding: 20px;
+
+        .ImageContainer {
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+      }
+      .spotify {
+        width: 184px;
+        height: 260.97px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 6.15789px;
+        margin-left: 67px;
+
+        margin-top: -40px;
+        padding: 20px;
+
+        .ImageContainer {
+          width: 100%;
+          height: 100%;
+          max-height: 148px;
+          position: relative;
+        }
+        .CampaignContent {
+          margin-top: 26px;
+        }
+      }
+      .spotify.spotify__active {
+        box-shadow: 7px 7px 1px #1db954;
+        background: rgba(255, 255, 255, 0.15);
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+      }
+    }
+
+    .pictureContainer {
+      width: 25%;
+
+      .spotlight {
+        position: absolute;
+        top: -10%;
+        right: -20%;
+        z-index: -1;
+        left: auto;
+        transform: scaleX(-1);
+      }
+
+      .spotlight_variant2 {
+        position: absolute;
+        top: -10%;
+        left: -5%;
+        z-index: -1;
+      }
+
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+
+      .variant1 {
+        width: 250px;
+        height: 210px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 7px;
+        padding: 15px;
+
+        div {
+          width: 220px;
+          height: 180px;
+          position: relative;
+        }
+      }
+      .variant2 {
+        width: 170px;
+        height: 250px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 7px;
+
+        padding: 15px;
+
+        div {
+          width: 140px;
+          height: 220px;
+          position: relative;
+        }
+      }
+      .variant3 {
+        margin-top: 25px;
+        margin-left: auto;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 7px;
+
+        padding: 15px;
+        div {
+          width: 170px;
+          height: 170px;
+          position: relative;
+        }
+      }
+
+      .variant4 {
+        margin-top: 25px;
+        position: relative;
+        left: -50px;
+        width: 250px;
+        height: 250px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 7px;
+
+        padding: 15px;
+        div {
+          width: 220px;
+          height: 220px;
+          position: relative;
+        }
+      }
+
+      .variant5 {
+        margin-top: 25px;
+        position: relative;
+        right: -100px;
+        width: 195px;
+        height: 275px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 7px;
+
+        padding: 15px;
+        div {
+          width: 165px;
+          height: 245px;
+          position: relative;
+        }
+      }
+    }
+
+    .campaignCTA {
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
+      //margin-left: 105px;
+      .contentContainer {
+        max-width: 410px;
+
+        h1 {
+          font-size: 45px;
+          line-height: 52px;
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-weight: 800;
+          @media only screen and (max-width: 768px) {
+            font-size: 36px;
+            line-height: 36px;
+          }
+        }
+        .underText {
+          font-size: 22px;
+          letter-spacing: 0.05em;
+          color: rgba(255, 255, 255, 0.65);
+        }
+        .buttonContainer {
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        .smallCta {
+          position: relative;
+          cursor: pointer;
+          font-size: 12px;
+          font-weight: 600;
+          &:before {
+            content: '';
+            width: 100%;
+            background-color: #fdfdfd;
+            bottom: -2px;
+            height: 1px;
+            position: absolute;
+          }
+        }
+      }
+      .contentContainer.contentContainer__centered {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media only screen and (max-width: 768px) {
+          align-items: flex-start;
+        }
+        h1 {
+          text-align: center;
+          @media only screen and (max-width: 768px) {
+            text-align: start;
+          }
+        }
+        .underText {
+          text-align: center;
+          display: block;
+          @media only screen and (max-width: 768px) {
+            text-align: start;
+          }
+        }
+        ul {
+          width: 100%;
+        }
+
+        .buttonContainer {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .HeroContainer.HeroContainer__modified {
+    justify-content: space-between;
+  }
+}

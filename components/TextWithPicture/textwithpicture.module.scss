@@ -1,0 +1,11 @@
+:local {
+  .container {
+    width: 100%;
+    display: flex;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 20px;
+    }
+  }
+}

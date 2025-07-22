@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  position: relative;
+  z-index: -2;
+  background-color: rgb(18, 18, 18);
+  color: #fdfdfd;
+  scroll-behavior: smooth;
+}
+
+input[type='date'] {
+  display: block;
+
+  -webkit-appearance: none;
+}
+
+select,
+textarea,
+input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+input:-internal-autofill-selected {
+  background-color: #363636 !important;
+}
+
+#__next {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.accountWrapper {
+  position: relative;
+  max-width: 1270px;
+  margin-left: 250px;
+  margin-right: auto;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .accountWrapper {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+  }
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1270px;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 90px);
+
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: calc(100% - 45px);
+  }
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-radius: 25px !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #b165ed !important;
+  width: 20px !important;
+}
+
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.error2 {
+  background-color: green;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.youtube:after {
+  background-color: #e00;
+}
+.soundcloud:after {
+  background-color: #f50;
+}
+.spotify:after {
+  background-color: #1db954;
+}
+
+.textColor-youtube {
+  color: #ff0000 !important;
+}
+.textColor-spotify {
+  color: #1ed760 !important;
+}
+.textColor-soundcloud {
+  color: #ff5502 !important;
+}
+
+i.icon {
+  margin-left: 10px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  display: inline-block;
+  height: 20px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* Builder slider */
+.MuiSlider-rail {
+  background-color: rgb(35, 35, 35) !important;
+  transition: all 1s ease-in-out;
+}
+
+.MuiSlider-track {
+  transition: all 0.3s !important;
+}
+
+.MuiSlider-root {
+  height: 6px !important;
+}
+
+.MuiSlider-mark {
+  display: none !important;
+}
+
+.PhoneInput{
+  width: 100% !important;
+}
+
+.PhoneInputInput{
+  color: #fdfdfd;
+  background-color: transparent;
+  border: none;
+}
+
+.MuiSlider-thumb {
+  width: 16px;
+  height: 16px;
+  color: #fdfdfd;
+  box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.25);
+  transition: left 0.3s !important;
+}
+
+.Mui-active {
+  transition: left 0.3s !important;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+::selection {
+  background: #b165ed;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b165ed;
+  border-radius: 16px;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #b165ed;
+} */
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+/* Styles for emoji in HomeHero subtitle */
+.no-overlay-emoji {
+  color: rgba(255, 255, 255, 1) !important; /* Full white color */
+  opacity: 1 !important; /* Ensure full opacity */
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}

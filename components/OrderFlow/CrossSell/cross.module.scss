@@ -1,0 +1,319 @@
+:local {
+  .container {
+    width: 650px;
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+    .header {
+      margin-top: 60px;
+      display: flex;
+
+      margin-bottom: 14px;
+      font-size: 24px;
+
+      font-weight: bold;
+
+      span {
+        color: #b165ed;
+        display: contents;
+      }
+    }
+
+    .discountLabel {
+      margin-bottom: 10px;
+      display: inline-block;
+      color: rgba(255, 255, 255, 0.4);
+      position: relative;
+
+      &:before {
+        content: '';
+        bottom: -5px;
+        width: 110%;
+        height: 1px;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    .promotionBody {
+      margin-top: 10px;
+    }
+
+    .promotionItem {
+      width: 100%;
+      background: rgba(27, 27, 27);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: ease-in 0.1s;
+      @media only screen and (max-width: 768px) {
+        padding: 10px;
+      }
+      &:hover {
+        transition: ease-in 0.1s;
+        transform: scale(1.01);
+      }
+      &:active {
+        transition: ease-in 0.1s;
+        transform: scale(1.05);
+      }
+      .promotion {
+        display: flex;
+        width: 95%;
+        justify-content: space-between;
+        @media only screen and (max-width: 768px) {
+          flex-direction: column;
+          align-items: center;
+          border-right: 1px solid rgba(128, 128, 128, 0.3);
+          margin-right: 10px;
+        }
+        .songDetails {
+          display: flex;
+          align-items: center;
+          .image {
+            height: 50px;
+            width: 50px;
+            position: relative;
+            border: 2px solid rgba(30, 215, 96, 1);
+            border-radius: 7px;
+            span {
+              border-radius: 5px;
+            }
+          }
+          span {
+            margin-left: 20px;
+            color: rgba(30, 215, 96, 1);
+            font-weight: 600;
+
+            max-width: 270px;
+          }
+        }
+        .promotionDeal {
+          border-right: 1px solid rgba(128, 128, 128, 0.3);
+          text-align: center;
+          padding-right: 15px;
+          @media only screen and (max-width: 768px) {
+            padding-right: 0;
+            border-right: none;
+            margin-top: 10px;
+          }
+          span {
+            display: block;
+          }
+
+          .price {
+            margin-top: 5px;
+
+            b {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+      .checkboxContainer {
+        .checkbox {
+          width: 16px;
+          height: 16px;
+          border: 1px solid #fdfdfd;
+          position: relative;
+          box-sizing: border-box;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .promotionItem.promotionItem__active {
+      background: rgba(45, 45, 45);
+      transform: scale(1.03);
+    }
+
+    .services {
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+      }
+      .item {
+        height: auto;
+        background: rgba(27, 27, 27);
+        border-radius: 7px;
+        //margin: auto 40px;
+        padding: 25px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: all 0.1s ease-in;
+        margin-bottom: 25px;
+        transition: ease-in 0.1s;
+        &:hover {
+          transition: ease-in 0.1s;
+          transform: scale(1.01);
+        }
+
+        svg {
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+          }
+        }
+
+        @media only screen and (max-width: 768px) {
+          padding: 10px;
+          height: initial;
+          min-width: 150px;
+          display: block;
+          width: 49%;
+        }
+
+        i {
+          svg {
+            width: 50px;
+            height: 50px;
+
+            @media only screen and (max-width: 768px) {
+              width: 100%;
+              height: 40px;
+            }
+          }
+        }
+        div {
+          @media only screen and (max-width: 768px) {
+            margin-top: 10px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+          }
+        }
+        i.soundcloud {
+          svg {
+            path {
+              fill: rgba(255, 85, 2, 1);
+            }
+          }
+        }
+        i.spotify {
+          svg {
+            path {
+              fill: rgba(30, 215, 96, 1);
+            }
+          }
+        }
+        i.youtube {
+          svg {
+            path {
+              fill: rgba(255, 0, 0, 1);
+            }
+          }
+        }
+
+        h4 {
+          font-size: 18px;
+          margin-top: 0;
+          font-weight: 700;
+          margin-bottom: 5px;
+
+          @media only screen and (max-width: 768px) {
+            font-size: 10px;
+          }
+        }
+
+        span {
+          font-size: 12px;
+          font-weight: 600;
+          color: rgba(255, 255, 255, 0.4);
+        }
+      }
+    }
+    .smallCTA {
+      font-weight: 600;
+      font-size: 14px;
+      color: #b165ed;
+      font-weight: bold;
+      letter-spacing: 0.428571px;
+      cursor: pointer;
+      border-radius: 5px;
+      display: flex;
+
+      svg {
+        margin-left: 7px;
+        fill: #b165ed;
+        transform: rotate(180deg);
+      }
+    }
+    .finish {
+      margin-top: 40px;
+      width: 100%;
+      height: 104px;
+      font-weight: 600;
+      font-size: 16px;
+
+      font-weight: bold;
+      letter-spacing: 0.428571px;
+      cursor: pointer;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: rgba(45, 45, 45, 1);
+      border-radius: 7px;
+      padding: 25px 50px;
+      transition: ease-in 0.1s;
+      &:hover {
+        transition: ease-in 0.1s;
+        transform: scale(1.01);
+      }
+
+      i svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 18px;
+
+        @media only screen and (max-width: 768px) {
+          width: 180px;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        margin-top: 15px;
+        padding: 25px 25px;
+
+        position: fixed;
+
+        left: 0;
+
+        bottom: 0;
+
+        z-index: 2;
+      }
+    }
+    .returnButton {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.4);
+      display: flex;
+      cursor: pointer;
+
+      svg {
+        margin-right: 10px;
+        fill: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+:local {
+  .social_container {
+    margin-top: 25px;
+    display: flex;
+
+    @media only screen and (max-width: 768px) {
+      justify-content: space-between;
+    }
+    .item {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+      margin-right: 25px;
+      border: 2px solid #b165ed;
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+        transition: all ease-in-out 0.2s;
+      }
+      @media only screen and (max-width: 768px) {
+        width: 75px;
+        height: 75px;
+        border-radius: 15px;
+        margin-right: 0;
+      }
+    }
+  }
+}

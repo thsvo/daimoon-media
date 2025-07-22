@@ -1,0 +1,18 @@
+:local {
+  .loadingContainer {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .loadingCircle {
+      width: 10px;
+      height: 10px;
+      border-radius: 15px;
+      background-color: white;
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+:local {
+  .container {
+    background: rgba(51, 51, 51);
+    opacity: 0.97;
+    border-radius: 6px;
+    padding: 20px;
+
+    min-height: 180px;
+    position: relative;
+    .orderId {
+      font-size: 13px;
+      margin-top: 5px;
+      font-weight: bold;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      background-color: rgb(37, 37, 37, 0.95);
+
+      z-index: 2;
+
+      p {
+        text-align: center;
+        max-width: 200px;
+        font-size: 12px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        span {
+          color: rgba(177, 101, 237, 1);
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+    .containerHead {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      .edit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        i {
+          cursor: pointer;
+          &:hover {
+            transition: all 0.3;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+    .campaignValue {
+      // position: absolute;
+      // bottom: 20px;
+      // right: 30px;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: 300;
+      b {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+  .campaign {
+    padding: 20px 20px 20px 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.428571px;
+    font-weight: bold;
+
+    @media only screen and (max-width: 768px) {
+      padding: 20px 0 20px 0;
+    }
+
+    .campaign_row {
+      margin-bottom: 10px;
+      font-style: italic;
+      div {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+
+        span:first-child {
+          flex: 1 1;
+        }
+      }
+
+      .targetContainer {
+        flex-direction: column;
+        border-top: 1px solid #5f5f5f;
+        margin-top: 7px;
+        padding-top: 7px;
+
+        .list {
+          margin-top: 5px;
+          li {
+            display: flex;
+            justify-content: space-between;
+            span {
+              width: 120px;
+            }
+            .price {
+              text-align: end;
+            }
+          }
+        }
+      }
+    }
+  }
+}

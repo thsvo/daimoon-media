@@ -1,0 +1,35 @@
+:local {
+  .quote {
+    font-size: 30px;
+    line-height: 41px;
+    max-width: 610px;
+    font-weight: 600;
+    position: relative;
+    margin: 20px 0;
+    @media only screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: initial;
+      margin: 5px;
+    }
+  }
+  .quote:before {
+    content: '“';
+    color: #b165ed;
+    position: absolute;
+    left: -30px;
+    font-size: 40px;
+    @media only screen and (max-width: 768px) {
+      font-size: 20px;
+      left: -15px;
+    }
+  }
+  .quote:after {
+    content: '“';
+    color: #b165ed;
+    font-size: 40px;
+    margin-left: 15px;
+    @media only screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+}

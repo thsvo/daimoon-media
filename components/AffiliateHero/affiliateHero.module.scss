@@ -1,0 +1,128 @@
+:local {
+  .spotlight {
+    position: absolute;
+
+    top: -30%;
+    left: -20%;
+    z-index: -1;
+  }
+  .HeroContainer {
+    margin-top: 50px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 0px;
+    }
+
+    .videoContainer {
+      max-width: 633px;
+      margin-right: 50px;
+      width: 100%;
+      height: 396px;
+      position: relative;
+      cursor: pointer;
+
+      @media only screen and (max-width: 768px) {
+        height: 170px;
+        order: 2;
+        margin-right: 0;
+        margin-top: 25px;
+      }
+      .videoWrapper {
+        width: 100%;
+        height: 90%;
+        background-color: #2c2c2c;
+
+        border-radius: 10px;
+      }
+      .paymentContainer {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .paymentList {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          margin-top: 15px;
+          margin-bottom: 5px;
+        }
+      }
+      .videoOverlay {
+        .image {
+          opacity: 0.3;
+        }
+      }
+      .playButton {
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 6px;
+        width: 117px;
+        height: 79px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+      }
+    }
+
+    .campaignCTA {
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
+      //margin-left: 105px;
+      .contentContainer {
+        max-width: 410px;
+
+        h1 {
+          font-size: 45px;
+          line-height: 52px;
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-weight: 800;
+          @media only screen and (max-width: 768px) {
+            font-size: 36px;
+            line-height: 36px;
+          }
+        }
+        .underText {
+          font-size: 22px;
+          letter-spacing: 0.05em;
+          color: rgba(255, 255, 255, 0.65);
+        }
+        .buttonContainer {
+          display: flex;
+          flex-direction: column;
+          margin-top: 40px;
+          margin-bottom: 20px;
+        }
+        .smallCta {
+          position: relative;
+          cursor: pointer;
+          font-size: 12px;
+          font-weight: 600;
+          &:before {
+            content: '';
+            width: 100%;
+            background-color: #fdfdfd;
+            bottom: -2px;
+            height: 1px;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}

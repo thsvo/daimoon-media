@@ -1,0 +1,787 @@
+
+
+[
+  {
+    "service": "spotify",
+    "labels": [
+      {
+        "title": "Playlist Followers Reached",
+        "info": "The total number of playlists followers you’ll reach across all placements in your campaign, according to our estimation."
+      },
+      {
+        "title": "Resulting Streams",
+        "info": "The total number of streams resulting from all placements in your campaign, according to our estimation."
+      }
+    ],
+    "fields": [
+      {
+        "name": "Campaign:",
+        "explanation": "Reach a large number of Spotify listeners by more playlist placements. Our top priority will be featuring your song on big playlists, focussing on a total number of followers reached.",
+        "type": "slider",
+        "values": [
+          {
+            "value": 0,
+            "obj": {
+              "text": "Bedroom Artist",
+              "value": 8000,
+              "streams": 8000,
+              "min_followers": 10000,
+              "max_followers": 50000,
+              "min_streams": 6000,
+              "max_streams": 10000,
+              "playlists": 0,
+              "cost": 197,
+              "budget": 16,
+              "discounts": [
+                {
+                  "text": "Extra 1,000 - 3,000 Streams Boost✅",
+                  "value": 2000,
+                  "streams": 2000,
+                  "min_followers": 0,
+                  "max_followers": 0,
+                  "min_streams": 2000,
+                  "max_streams": 2000,
+                  "playlists": 0,
+                  "cost": 37,
+                  "full_price": 57,
+                  "budget": 8
+                }
+              ]
+            }
+          },
+          {
+            "value": 1,
+            "obj": {
+              "text": "One-To-Watch Artist 🔥",
+              "value": 15000,
+              "streams": 15000,
+              "min_followers": 20000,
+              "max_followers": 80000,
+              "min_streams": 12000,
+              "max_streams": 18000,
+              "playlists": 0,
+              "cost": 347,
+              "budget": 80,
+              "discounts": [
+                {
+                  "text": "Claim Extra 2,000 - 4,000 Streams📈",
+                  "value": 3000,
+                  "streams": 3000,
+                  "min_followers": 0,
+                  "max_followers": 0,
+                  "min_streams": 3000,
+                  "max_streams": 3000,
+                  "playlists": 0,
+                  "cost": 47,
+                  "full_price": 67,
+                  "budget": 24
+                }
+              ]
+              
+            }
+          },
+          {
+            "default": true,
+            "value": 2,
+            "obj": {
+              "text": "Club Artist - Most chosen💣",
+              "value": 25000,
+              "streams": 25000,
+              "min_followers": 50000,
+              "max_followers": 200000,
+              "min_streams": 20000,
+              "max_streams": 30000,
+              "playlists": 0,
+              "cost": 597,
+              "budget": 160,
+              "discounts": [
+                {
+                  "text": "Increase with 4,000 - 6,000 Streams🔥",
+                  "value": 5000,
+                  "streams": 5000,
+                  "min_followers": 0,
+                  "max_followers": 0,
+                  "min_streams": 5000,
+                  "max_streams": 5000,
+                  "playlists": 0,
+                  "cost": 67,
+                  "full_price": 97,
+                  "budget": 80
+                }
+              ]
+            }
+          },
+          {
+            "value": 3,
+            "obj": {
+              "text": "Touring Artist",
+              "value": 45000,
+              "streams": 45000,
+              "min_followers": 100000,
+              "max_followers": 300000,
+              "min_streams": 35000,
+              "max_streams": 45000,
+              "playlists": 8,
+              "cost": 997,
+              "budget": 320,
+              "discounts": [
+                {
+                  "text": "Increase with 8,000 - 12,000 Streams👏",
+                  "value": 10000,
+                  "streams": 10000,
+                  "min_followers": 0,
+                  "max_followers": 0,
+                  "min_streams": 10000,
+                  "max_streams": 10000,
+                  "playlists": 0,
+                  "cost": 137,
+                  "full_price": 197,
+                  "budget": 160
+                }
+              ]
+            }
+          },
+          {
+            "value": 4,
+            "obj": {
+              "text": "Festival Artist - The heaviest we can do🤯",
+              "value": 80000,
+              "streams": 80000,
+              "min_followers": 200000,
+              "max_followers": 800000,
+              "min_streams": 70000,
+              "max_streams": 90000,
+              "playlists": 0,
+              "cost": 1497,
+              "budget": 560,
+              "discounts": [
+                {
+                  "text": "Increase with 18,000 - 22,000 Streams🚀",
+                  "value": 20000,
+                  "streams": 20000,
+                  "min_followers": 0,
+                  "max_followers": 0,
+                  "min_streams": 20000,
+                  "max_streams": 20000,
+                  "playlists": 0,
+                  "cost": 267,
+                  "full_price": 397,
+                  "budget": 240
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "service": "youtube", 
+    "fields": [
+      {
+        "name": "Views",
+        "explanation": "Reach the most relevant viewers across the globe or focus towards one or multiple territories. Our top priority will be advertising your song as targeted and efficiently as possible.",
+        "type": "slider",
+        "values": [
+        {
+          "value": 0,
+          "obj": {
+            "value": 0,
+            "streams": 0,
+            "playlists": 0,
+            "cost": 0,
+            "discounts": [
+                
+            ]
+          }
+        },
+        {
+          "default": true,
+          "value": 1,
+          "obj": {
+            "text": "10.000",
+            "value": 10000,
+            "streams": 10000,
+            "playlists": 0,
+            "cost": 124,
+            "discounts": [
+              {
+                "text": "Add 10K extra,",
+                "subtext": "40% discount",
+                "value": 10000,
+                "playlists": 0,
+                "streams": 10000,
+                "cost": 73,
+                "full_price": 124
+              }
+            ]
+          }   
+        },
+        {
+          "value": 2,
+          "obj": {
+            "text": "25.000",
+            "value": 25000,
+            "streams": 25000,
+            "playlists": 0,
+            "cost": 297,
+            "discounts": [
+                {
+                  "text": "Add 20K extra,",
+                  "subtext": "40% discount",
+                  "value": 20000,
+                  "playlists": 0,
+                  "streams": 20000,
+                  "cost": 150,
+                  "full_price": 248
+                }
+              ]
+          }
+        },
+        {
+          "value": 3,
+          "obj": {
+            "text": "50.000",
+            "value": 50000,
+            "streams": 50000,
+            "playlists": 0,
+            "cost": 597,
+            "discounts": [
+                {
+                  "text": "Add 30K extra,",
+                  "subtext": "30% discount",
+                  "value": 30000,
+                  "playlists": 0,
+                  "streams": 30000,
+                  "cost": 250,
+                  "full_price": 372
+                }
+              ]
+          }
+        },
+        {
+          "value": 4,
+          "obj": {
+            "text": "100.000",
+            "value": 100000,
+            "streams": 100000,
+            "playlists": 0,
+            "cost": 1197,
+            "discounts": [
+                {
+                  "text": "Add 50K extra,",
+                  "subtext": "30% discount",
+                  "value": 50000,
+                  "playlists": 0,
+                  "streams": 50000,
+                  "cost": 400,
+                  "full_price": 620
+                }
+              ]
+          }
+        },
+        {
+          "value": 5,
+          "obj": {
+            "text": "200.000",
+            "value": 200000,
+            "streams": 200000,
+            "playlists": 0,
+            "cost": 2397, 
+            "discounts": [
+                {
+                  "text": "Add 100K extra,",
+                  "subtext": "30% discount",
+                  "value": 100000,
+                  "playlists": 0,
+                  "streams": 100000,
+                  "cost": 800,
+                  "full_price": 1240
+                }
+              ]
+          }
+        }]
+      },
+      {
+        "name": "Target countries",
+        "explanation": "Ready to reach only specific parts of the world? Narrow your fanbase to your own territory and reach targeted audiences across the globe. Some audiences require higher advertising costs.",
+        "type": "list",
+        "values": [
+          {
+            "text": "Europe",
+            "cost": "25%"
+          },
+          {
+            "text": "USA",
+            "cost": "100%"
+          },
+           {
+            "text": "Canada",
+            "cost": "30%"
+          },
+          {
+            "text": "Oceanië",
+            "cost": "25%"
+          },
+          {
+            "text": "Asia",
+            "cost": "15%"
+          }  
+          ]
+      }
+    ]
+  },
+  {
+    "service": "soundcloud", 
+    "labels": [
+      {
+        "title": "Channel Followers Reached",
+        "info": "The total number of channel followers you’ll reach with all reposts in your campaign, according to our estimation."
+      },
+      {
+        "title": "Resulting Plays",
+        "info": " The total number of plays resulting from all reposts in your campaign, according to our estimation."
+      }
+    ],
+    "fields": [
+      {
+        "name": "Reach Target",
+        "explanation": "Reach a large number of channel followers by more reposts. Our top priority will be getting your track reposted by big channels, focussing on a total number of channel followers reached.",
+        "type": "slider",
+        "values": [
+          {
+            "value": 0,
+            "obj": {
+              "text": "0",
+              "value": 0,
+              "streams": 0,
+              "min_followers": 0,
+              "max_followers": 0,
+              "min_streams": 0,
+              "max_streams": 0,
+              "playlists": 0,
+              "cost": 0,
+              "budget": 0,
+              "discounts": [
+                
+              ]
+            }
+          },
+          {
+            "default": true,
+            "value": 1,
+            "obj": {
+              "text": "200.000",
+              "value": 200000,
+              "min_streams": 1000,
+              "max_streams": 3000,
+               "min_followers": 200000,
+              "max_followers": 200000,
+              "streams": 2500,
+              "playlists": 0,
+              "cost": 39.00,
+              "budget": 10,
+              "discounts": [
+                {
+                  "text": "Add 100K extra,",
+                  "subtext": "27% discount",
+                  "value": 100000,
+                  "playlists": 0,
+                  "min_streams": 1500,
+              "max_streams": 1500,
+               "min_followers": 100000,
+              "max_followers": 100000,
+                  "streams": 1500,
+                  "cost": 17.00,
+                  "full_price": 56,
+                  "budget": 5
+                }
+              ]
+            }
+          },
+          {
+            "value": 2,
+            "obj": {
+              "text": "500.000",
+              "value": 500000,
+              "min_streams": 2000,
+              "max_streams": 6000,
+               "min_followers": 500000,
+              "max_followers": 500000,
+              "streams": 5000,
+              "playlists": 0,
+              "cost": 79.00,
+              "budget": 20,
+              "discounts": [
+                {
+                  "text": "Add 250K extra,",
+                  "subtext": "32% discount",
+                  "value": 250000,
+                  "playlists": 0,
+                  "streams": 2500,
+                  "min_streams": 2500,
+                  "max_streams": 2500,
+                  "min_followers": 250000,
+                  "max_followers": 250000,
+                  "cost": 27.00,
+                  "full_price": 106,
+                  "budget": 10
+                }
+              ]
+            }
+          },
+          {
+            "value": 3,
+            "obj": {
+              "text": "1.000.000",
+              "value": 1000000,
+              "min_streams": 6000,
+              "max_streams": 11000,
+              "min_followers": 1000000,
+              "max_followers": 1000000,
+              "streams": 10000,
+              "playlists": 0,
+              "cost": 147.00,
+              "budget": 40,
+              "discounts": [
+                {
+                  "text": "Add 500K extra,",
+                  "subtext": "36% discount",
+                  "value": 500000,
+                  "playlists": 0,
+                  "streams": 5000,
+                  "min_streams": 5000,
+                  "max_streams": 5000,
+                  "min_followers": 500000,
+                  "max_followers": 500000,
+                  "cost": 47.00,
+                  "full_price": 194,
+                  "budget": 20
+                }
+              ]
+            }
+          },
+          {
+            "value":4,
+            "obj": {
+              "text": "2.000.000",
+              "value": 2000000,
+              "min_streams": 18000,
+              "max_streams": 28000,
+              "min_followers": 2000000,
+              "max_followers": 2000000,
+              "streams": 25000,
+              "playlists": 0,
+              "cost": 297.00,
+              "budget": 100,
+              "discounts": [
+                {
+                  "text": "Add 700K extra,",
+                  "subtext": "14% discount",
+                  "value": 700000,
+                  "playlists": 0,
+                  "streams": 7500,
+                  "min_streams": 7500,
+              "max_streams": 7500,
+               "min_followers": 700000,
+              "max_followers": 700000,
+                  "cost": 77.00,
+                  "full_price": 374,
+                  "budget": 30
+                }
+              ]
+            }
+          },
+          {
+            "value":5,
+            "obj": {
+              "text": "3.000.000",
+              "value": 3000000,
+              "min_streams": 30000,
+              "max_streams": 40000,
+              "min_followers": 3000000,
+              "max_followers": 3000000,
+              "streams": 40000,
+              "playlists": 0,
+              "cost": 437.00,
+              "budget": 160,
+              "discounts": [
+                {
+                  "text": "Add 1M extra,",
+                  "subtext": "14% discount",
+                  "value": 1000000,
+                  "playlists": 0,
+                  "streams": 15000,
+                   "min_streams": 15000,
+              "max_streams": 15000,
+               "min_followers": 1000000,
+              "max_followers": 1000000,
+                  "cost": 147.00,
+                  "full_price": 584,
+                  "budget": 53
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Play Target",
+        "explanation": "Focus on highly active channels. Our top priority will be getting your track reposted by popular active channels, rather than big channels.",
+        "type": "slider",
+        "values": [
+          {
+            "value": 0,
+            "obj": {
+              "text": "0",
+              "value": 0,
+              "min_streams": 0,
+              "max_streams": 0,
+              "min_followers": 0,
+              "max_followers": 0,
+              "streams": 0,
+              "playlists": 0,
+              "cost": 0,
+              "budget": 0,
+              "discounts": [
+                
+              ]
+            }
+          },
+          {
+            "default": true,
+            "value": 1,
+            "obj": {
+              "text": "2000+",
+              "value": 0,
+              "min_streams": 1000,
+              "max_streams": 3000,
+              "min_followers": 0,
+              "max_followers": 0,
+              "streams": 2500,
+              "playlists": 0,
+              "cost": 29.00,
+              "budget": 8.00,
+              "discounts": [
+                {
+                  "text": "Add 2000 extra,",
+                  "subtext": "41% discount",
+                  "value": 0,
+                  "playlists": 0,
+                  "min_streams": 1000,
+                  "max_streams": 3000,
+                  "min_followers": 0,
+                  "max_followers": 0,
+                  "streams": 2500,
+                  "cost": 17,
+                  "full_price": 46,
+                  "budget": 6
+                }
+              ]
+            }
+          },
+          {
+            "value": 2,
+            "obj": {
+              "text": "4000+",
+              "value": 0,
+              "min_streams": 4000,
+              "max_streams": 6000,
+              "min_followers": 0,
+              "max_followers": 0,
+              "streams": 5000,
+              "playlists": 0,
+              "cost": 59.00,
+              "budget": 16,
+              "discounts": [
+                {
+                  "text": "Add 3000 extra,",
+                  "subtext": "39% discount",
+                  "value": 0,
+                  "playlists": 0,
+                  "streams": 3000,
+                  "min_streams": 3000,
+                  "max_streams": 3000,
+                  "min_followers": 0,
+                  "max_followers": 0,
+                  "cost": 27,
+                  "full_price": 86,
+                  "budget": 8
+                }
+              ]
+            }
+          },
+          {
+            "value": 3,
+            "obj": {
+              "text": "8.000+",
+              "value": 0,
+               "min_streams": 8000,
+              "max_streams": 12000,
+              "min_followers": 0,
+              "max_followers": 0,
+              "streams": 10000,
+              "playlists": 0,
+              "cost": 99,
+              "budget": 32,
+              "discounts": [
+                {
+                  "text": "Add 4000 extra,",
+                  "subtext": "45% discount",
+                  "value": 0,
+                  "playlists": 0,
+                  "min_streams": 4000,
+                  "max_streams": 4000,
+                  "min_followers": 0,
+                  "max_followers": 0,
+                  "streams": 4000,
+                  "cost": 27.00,
+                  "full_price": 126,
+                  "budget": 14
+                }
+              ]
+            }
+          },
+          {
+            "value": 4,
+            "obj": {
+              "text": "20.000+",
+              "value": 0,
+               "min_streams": 20000,
+              "max_streams": 30000,
+              "min_followers": 0,
+              "max_followers": 0,
+              "streams": 25000,
+              "playlists": 0,
+              "cost": 229.00,
+              "budget": 80,
+              "discounts": [
+                {
+                  "text": "Add 7500 extra,",
+                  "subtext": "22% discount",
+                  "value": 0,
+                  "playlists": 0,
+                  "min_streams": 7500,
+                  "max_streams": 7500,
+                  "min_followers": 0,
+                  "max_followers": 0,
+                  "streams": 7500,
+                  "cost": 67.00,
+                  "full_price": 296,
+                  "budget": 30
+                }
+              ]
+            }
+          },
+          {
+            "value": 5,
+            "obj": {
+              "text": "40.000+",
+              "value": 0,
+               "min_streams": 40000,
+              "max_streams": 60000,
+              "min_followers": 0,
+              "max_followers": 0,
+              "streams": 50000,
+              "playlists": 0,
+              "cost": 450.00,
+              "budget": 169,
+              "discounts": [
+                {
+                  "text": "Add 12500 extra,",
+                  "subtext": "31% discount",
+                  "value": 0,
+                  "playlists": 0,
+                  "min_streams": 12500,
+                  "max_streams": 12500,
+                  "min_followers": 0,
+                  "max_followers": 0,
+                  "streams": 12500,
+                  "cost": 97.00,
+                  "full_price": 547,
+                  "budget": 40
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "service": "tiktok",
+    "labels": [
+      {
+        "title": "Promoted By Influencers with a combined amount of Followers",
+        "info": "The total amount of followers"
+      }
+    ],
+    "fields": [
+      {
+        "name": "Campaign:",
+        "explanation": "Reach a large number of Spotify listeners by more playlist placements. Our top priority will be featuring your song on big playlists, focussing on a total number of followers reached.",
+        "type": "slider",
+        "values": [
+          {
+            "value": 0,
+            "obj": {
+              "text": "One-To-Watch Artist",
+              "explanation": "Basic promotion essentials to kickstart your TikTok video presence.",
+              "value": 40000,
+              "streams": 40000,
+              "min_followers": 0,
+              "max_followers": 0,
+              "min_streams": 30000,
+              "max_streams": 50000,
+              "playlists": 0,
+              "cost": 137,
+              "budget": 0,
+              "discounts": [
+          
+              ]
+            }
+          },
+          {
+            "default": true,
+            "value": 1,
+            "obj": {
+              "text": "Touring Artist",
+              "explanation": "Intermediate-level TikTok promotion to boost visibility and engagement on your post.",
+              "value": 160000,
+              "streams": 160000,
+              "min_followers": 0,
+              "max_followers": 0,
+              "min_streams": 160000,
+              "max_streams": 180000,
+              "playlists": 0,
+              "cost": 597,
+              "budget": 0,
+              "discounts": [
+                
+              ]
+            }
+          },
+          {
+            "value": 2,
+            "obj": {
+              "text": "Festival Artist",
+              "explanation": "Comprehensive TikTok promotion for maximum exposure, maximizing visibility for your video and account.",
+              "value": 320000,
+              "streams": 320000,
+              "min_followers": 0,
+              "max_followers": 0,
+              "min_streams": 300000,
+              "max_streams": 340000,
+              "playlists": 0,
+              "cost": 997,
+              "budget": 0,
+              "discounts": [
+                
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

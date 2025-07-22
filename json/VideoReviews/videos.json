@@ -1,0 +1,379 @@
+[
+  {
+    "service": "trustpilot", 
+    "reviews": [
+      {
+        "type": "trustpilot",
+        "page": "homepage",
+        "name": "Nick",
+        "stars": 5,
+        "title": "Reliable.. Organic.. Strong Delivery",
+        "description": "I've been working with them for the past few months on reach campaigns and the delivery is solid as long as you have realistic expectations about organic growth companies.",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/618ce4d1fb38891f5f0848f0",
+          "name": "Nick",
+          "title": "Artist"
+        }
+      },
+      {
+        "type": "trustpilot",
+        "page": "homepage",
+        "name": "Litgod Womp",
+        "stars": 5,
+        "title": "Probably 'hands down' The Most Reliable",
+        "description": "DaimoonMedia is probably hands down the most reliable streaming growth platform out there currently. For anyone taking their music career serious and trying to take it to the next level!",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/6296e7a035343b8f5b5dcb58",
+          "name": "Litgod Womp",
+          "title": "Biggest fan"
+        }
+      },
+      {
+        "type": "trustpilot",
+        "page": "homepage",
+        "name": "Beth Daily",
+        "stars": 5,
+        "title": "Surprisingly a Great Experience",
+        "description": "I wanted to try these guys but kept putting off due to being skeptic. But my first experience with them wont be the last because these guys really came through and kept me updated throughout the whole campaign.",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/6268c3300c4813f76bf5b2ae",
+          "name": "Beth Daily",
+          "title": "Artist"
+        }
+      },
+      {
+        "type": "trustpilot",
+        "page": "homepage",
+        "name": "Jacob Johnson",
+        "stars": 5,
+        "title": "They really are #1",
+        "description": "Been using different PR services, including services from people that I know personally. However, I'm gonna stick with Daimoon. They're fast & communicate properly.",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/62777772166eb7ecbf406030",
+          "name": "Jacob Johnson",
+          "title": "Artist"
+        }
+      },
+      {
+        "type": "trustpilot",
+        "page": "homepage",
+        "name": "Bobby",
+        "stars": 5,
+        "title": "Tom and his team are Exceptional",
+        "description": "Tom and his team are exceptional and we’ve had nothing incredible results with Daimoon.",
+        "userinfo": {
+          "picture": "",
+          "link": "https://nl.trustpilot.com/reviews/614d20b5215cfcced26ea38b",
+          "name": "Bobby",
+          "title": "Artist"
+        }
+      },
+      
+      {
+        "type": "trustpilot",
+        "name": "Michael Nelson",
+        "stars": 5,
+        "title": "I Highly recommend DaimoonMedia",
+        "description": "Not only do you get results but it’s not bots. They pitch your music to multiple playlists that will actually reject your music if the curator doesn’t think it fits. So they keep pitching until they find the right fit.",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/622150c0361b35c36d5cccb6",
+          "name": "Michael Nelson",
+          "title": "Artist"
+        }
+      },
+      {
+        "type": "trustpilot",
+        "name": "MusicMan",
+        "stars": 5,
+        "title": "Repeat Customer (my go-to for Playlist Pitching)",
+        "description": "Been using these guys for years and am always beyond satisfied with their service. If you aren't getting accepted by better playlist curators, there is a reason. Curators get so many submissions that they have to be picky.",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/614d20b5215cfcced26ea38b",
+          "name": "MusicMan",
+          "title": "Artist"
+        }
+      },
+      {
+        "type": "trustpilot",
+        "name": "DS",
+        "stars": 5,
+        "title": "Highly Recommend!",
+        "description": "I was hesitant to try playlist exposure, but happy to say they did a great job. I first saw playlists that I thought were just examples with thousands of streams. But Daimoon actually got my song ON those playlists, awesome!",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/60cb1e21f9f4870a44d737b5",
+          "name": "DS",
+          "title": "Artist"
+        }
+      },
+      {
+        "type": "trustpilot",
+        "name": "Markus",
+        "stars": 5,
+        "title": "Very Good Youtube Promotion",
+        "description": "DaimoonMedia delivers the organic views on my Youtube Channel I am looking for. They are doing a very good service! I really can recommend them!",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/618d7021fb38891f5f08fdfb",
+          "name": "Markus",
+          "title": "Artist"
+        }
+      },
+      {
+        "type": "trustpilot",
+        "name": "Rick Dicksson",
+        "stars": 5,
+        "title": "DaimoonMedia #1",
+        "description": "DaimoonMedia has done a terrific job for us. They are always professional and get it done. Thank you!",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/61682d92234f1b1fe559f0aa",
+          "name": "Rick Dicksson",
+          "title": "Artist"
+        }
+      },
+      {
+        "type": "trustpilot",
+        "name": "Gianluca",
+        "stars": 5,
+        "title": "The Best in the Business",
+        "description": "The best in the business, great communication, and always delivering the expectations, I will use their services again! Absolutely suggested!",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/6074a54cf85d750870586266",
+          "name": "Gianluca",
+          "title": "Artist"
+        }
+      },
+      {
+        "type": "trustpilot",
+        "name": "John Malkin",
+        "stars": 5,
+        "title": "Daimoon is Incredible and a Must for any Musician!",
+        "description": "Our band The Simple Radicals can't thank Daimoon enough for the incredible work they do in gaining valuable exposure for us. We use them to help promote on Spotify as well as on YouTube.",
+        "userinfo": {
+          "picture": "",
+          "link": "https://www.trustpilot.com/reviews/622ccf110e5829d9e2a5ca12",
+          "name": "John Malkin",
+          "title": "Artist"
+        }
+      }
+      
+    ]
+  },
+  {
+    "service": "youtube", 
+    "reviews": [
+      {
+        "type": "video",
+        "videolink": "Testimonials/Youtube/papamarc.mp4",
+        "poster": "posters/youtube/papamarc.png",
+        "userinfo": {
+          "picture": "",
+          "Youtube": "",
+          "name": "Papa Marc",
+          "title": "Rapper"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Youtube/iammag.mp4",
+        "poster": "posters/youtube/iammag.png",
+        "userinfo": {
+          "picture": "",
+          "Youtube": "",
+          "name": "IAMMAG",
+          "title": "Artist"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Youtube/byrön.mp4",
+        "poster": "posters/youtube/byron.png",
+        "userinfo": {
+          "picture": "",
+          "Youtube": "",
+          "name": "Byrön",
+          "title": "Artist/Producer"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Youtube/djthera.mp4",
+        "poster": "posters/youtube/djthera.png",
+        "userinfo": {
+          "picture": "",
+          "Youtube": "https://www.youtube.com/channel/UCytjopi255nCRpv7Tw8LXXQ",
+          "name": "Dj Thera",
+          "title": "Hardstyle DJ/Producer"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Youtube/theewhyg.mp4",
+        "poster": "posters/youtube/theewhyg.png",
+        "userinfo": {
+          "picture": "",
+          "Youtube": "",
+          "name": "Theewhy G",
+          "title": "Rapper"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Youtube/kianazara.mp4",
+        "poster": "posters/youtube/kianazara.png",
+        "userinfo": {
+          "picture": "",
+          "youtube": "https://www.youtube.com/channel/UC0v7tjtqgxnVWyfLnXG8e5A",
+          "name": "Kiana Zara",
+          "title": "Singer/songwriter"
+        }
+      }
+    ]
+  },
+  {
+    "service": "soundcloud", 
+    "reviews": [
+      {
+        "type": "video",
+        "videolink": "Testimonials/SoundCloud/kikicubb.mp4",
+        "poster": "posters/soundcloud/kikicubb.png",
+        "userinfo": {
+          "picture": "",
+          "youtube": "https://www.instagram.com/kiki.cubb/",
+          "name": "Kiki Cubb",
+          "title": "Pianist/Composer"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/SoundCloud/discosundays.mp4",
+        "poster": "posters/soundcloud/discosundays.png",
+        "userinfo": {
+          "picture": "",
+          "youtube": "",
+          "name": "Disco Sundays",
+          "title": "Band"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/SoundCloud/christofferjonssen.mp4",
+        "poster": "posters/soundcloud/christofferjonssen.png",
+        "userinfo": {
+          "picture": "",
+          "youtube": "",
+          "name": "Christoffer Jonsson",
+          "title": "Artist/Producer"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/SoundCloud/leehow.mp4",
+        "poster": "posters/soundcloud/leehow.png",
+        "userinfo": {
+          "picture": "",
+          "youtube": "",
+          "name": "Lee How",
+          "title": "Artist"
+        }
+      }
+    ]
+  },
+  {
+    "service": "spotify", 
+    "reviews": [
+      {
+        "type": "video",
+        "videolink": "Testimonials/Spotify/jimmy-yitty.mp4",
+        "poster": "posters/spotify/jimmyyitty.png",
+        "name": "Jimmy",
+        "userinfo": {
+          "picture": "",
+          "link": "",
+          "name": "Jimmy Yitty",
+          "title": "Rapper"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Spotify/northsidejoyride.mp4",
+        "poster": "posters/spotify/northsidejoyride.png",
+        "name": "Northside Joyride",
+        "userinfo": {
+          "picture": "",
+          "link": "",
+          "name": "Northside Joyride",
+          "title": "Indie-pop/Producer"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Spotify/hogi.mp4",
+        "poster": "posters/spotify/hogi.png",
+        "name": "HOGI",
+        "userinfo": {
+          "picture": "",
+          "link": "",
+          "name": "HOGI",
+          "title": "UK Rapper"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Spotify/shemari-lee.mp4",
+        "poster": "posters/spotify/shemari-lee.png",
+        "name": "Shemari",
+        "userinfo": {
+          "picture": "",
+          "link": "",
+          "name": "Shemari Lee",
+          "title": "Singer/Songwriter"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Spotify/danielverstappen.mp4",
+        "poster": "posters/spotify/danielverstappen.png",
+        "name": "Daniel",
+        "userinfo": {
+          "picture": "",
+          "link": "",
+          "name": "Daniel Verstappen",
+          "title": "Pianist"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Spotify/mattmolloy.mp4",
+        "poster": "posters/spotify/mattmolloy.png",
+        "name": "Matt",
+        "userinfo": {
+          "picture": "",
+          "link": "",
+          "name": "Matt Molloy",
+          "title": "Lead singer/Guitar player"
+        }
+      },
+      {
+        "type": "video",
+        "videolink": "Testimonials/Spotify/algebraic.mp4",
+        "poster": "posters/spotify/algebraic.png",
+        "name": "Algebraic",
+        "userinfo": {
+          "picture": "",
+          "link": "",
+          "name": "Algebraic",
+          "title": "Guitarist"
+        }
+      }
+    ]
+  }
+]

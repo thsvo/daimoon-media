@@ -1,0 +1,21 @@
+:local {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    @media only screen and (max-width: 768px) {
+      margin-top: 100px;
+    }
+    h2 {
+      margin-bottom: 0;
+      font-size: 36px;
+      @media only screen and (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+  }
+  .center {
+    align-items: center;
+    text-align: center;
+  }
+}

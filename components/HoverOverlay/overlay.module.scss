@@ -1,0 +1,9 @@
+:local {
+  .overlay {
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+  }
+}

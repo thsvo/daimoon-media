@@ -1,0 +1,26 @@
+:local {
+  .accountContainer {
+    display: flex;
+
+    margin: 0 20px;
+
+    .dashboard {
+      background-color: #b165ed;
+      font-weight: 700;
+      font-size: 14px;
+      color: white;
+      border: none;
+
+      border-radius: 10px;
+
+      width: 113px;
+      height: 43px;
+      transition: all ease-in-out 0.15s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+        transition: all ease-in-out 0.15s;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+:local {
+  .trackUrl {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .releaseDate {
+      margin-top: 25px;
+      color: #b165ed;
+      text-align: center;
+      font-weight: 600;
+    }
+    .result {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .animationContainer {
+      position: relative;
+      .animation {
+        margin: 0;
+        position: absolute;
+        color: rgba(255, 255, 255, 0.27);
+        top: 50%;
+        width: 90%;
+        left: 59%;
+        transform: translate(-50%, -50%);
+        font-size: 12px;
+        @media only screen and (max-width: 768px) {
+          font-size: 11px;
+        }
+      }
+    }
+    .loaderContainer {
+      background-color: #313131;
+      border-radius: 50px;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+    input.spotifySearch {
+      color: #fdfdfd;
+    }
+    .spotifySearch::placeholder {
+      color: rgba(255, 255, 255, 0.27);
+      text-align: left;
+      font-weight: 400;
+      font-size: 12px;
+      @media only screen and (max-width: 768px) {
+        font-size: 11px;
+      }
+    }
+    .spotifySearch:focus {
+      outline: none;
+    }
+    .spotifySearch {
+      border: none;
+      display: inline;
+      width: 380px;
+      height: 55px;
+      font-size: 12px;
+
+      border-radius: 35px;
+      padding: 14px 14px 14px 55px;
+      background: rgba(255, 255, 255, 0.13);
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        font-size: 11px;
+      }
+      &::placeholder {
+        font-size: 12px;
+        @media only screen and (max-width: 768px) {
+          font-size: 11px;
+        }
+      }
+    }
+    .spotifySearch.validated {
+      border: 2px solid #1db954;
+    }
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      background-color: #b165ed;
+      width: 36px;
+      height: 36px;
+      top: 10px;
+      left: 10px;
+      border-radius: 25px;
+    }
+
+    .icon.validated__spotify {
+      background-color: #1db954;
+    }
+  }
+}

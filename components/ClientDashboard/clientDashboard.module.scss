@@ -1,0 +1,30 @@
+:local {
+  .container {
+    .itemList {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .orderContainer {
+        .header {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+
+          .orderInfo {
+            display: block;
+          }
+
+          .reciept {
+            background-color: #b165ed;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

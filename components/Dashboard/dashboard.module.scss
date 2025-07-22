@@ -1,0 +1,52 @@
+:local {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+
+    .dashboardContainer {
+      display: flex;
+      gap: 50px;
+
+      .dashboardPreview {
+        max-width: 680px;
+        @media only screen and (max-width: 768px) {
+          display: none;
+        }
+        .dashboardIntro {
+          margin-bottom: 60px;
+        }
+      }
+      .benefits {
+        display: flex;
+        flex-direction: column;
+
+        gap: 30px;
+        .item {
+          padding: 25px;
+          width: 400px;
+          height: 200px;
+          background: #1f2024;
+          border-radius: 6.96357px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          span {
+            font-weight: 600;
+            font-size: 16px;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 14px;
+
+            margin-bottom: 0;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

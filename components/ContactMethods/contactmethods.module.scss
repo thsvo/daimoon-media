@@ -1,0 +1,170 @@
+:local {
+  .container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .section_header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .section_title {
+        font-size: 40px;
+        line-height: 52px;
+        @media only screen and (max-width: 768px) {
+          font-size: 24px;
+
+          line-height: 32px;
+        }
+      }
+      .section_subtext {
+        font-weight: normal;
+        font-size: 20px;
+
+        max-width: 677px;
+      }
+    }
+    .section_support {
+      margin-top: 50px;
+      .support_items {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .item {
+          width: 33%;
+          max-width: 300px;
+          max-height: 135px;
+          padding: 20px;
+          border-radius: 13px;
+          text-align: center;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          transition: ease-in 0.2s;
+
+          @media only screen and (max-width: 768px) {
+            padding: 10px;
+          }
+
+          svg {
+            width: 32px;
+          }
+
+          &:hover {
+            transition: ease-in 0.2s;
+            transform: scale(1.05);
+          }
+          span {
+            margin-top: 15px;
+            @media only screen and (max-width: 768px) {
+              font-size: 14px;
+            }
+          }
+        }
+        .item.item_active {
+          background: #b165ed;
+        }
+      }
+      .support_information {
+        margin-top: 30px;
+        .FAQ_container {
+          background: rgba(255, 255, 255, 0.08);
+          border-radius: 13.3333px;
+          padding-top: 15px;
+        }
+
+        .question_section {
+          h3 {
+            font-size: 30px;
+            text-transform: capitalize;
+            position: relative;
+            text-align: center;
+            margin-bottom: 0;
+            &:after {
+              content: '';
+              border-bottom: 2px solid #b165ed;
+              width: 150px;
+              position: absolute;
+              margin-left: auto;
+              margin-right: auto;
+              left: 0;
+              right: 0;
+              bottom: -10px;
+            }
+          }
+          h3.spotify_title {
+            color: #1ed760;
+            &:after {
+              border-bottom: 2px solid #1ed760;
+            }
+          }
+          h3.youtube_title {
+            color: #ff0000;
+            &:after {
+              border-bottom: 2px solid #ff0000;
+            }
+          }
+          h3.soundcloud_title {
+            color: #ff5502;
+            &:after {
+              border-bottom: 2px solid #ff5502;
+            }
+          }
+          .buttonContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            .button {
+              padding: 20px;
+              border-radius: 5px;
+              color: #fdfdfd;
+              border: none;
+              font-weight: 700;
+              font-size: 14px;
+              cursor: pointer;
+              transition: ease-in 0.2s;
+              &:hover {
+                transition: ease-in 0.2s;
+                transform: scale(1.05);
+              }
+            }
+          }
+        }
+        .container {
+          background: rgba(255, 255, 255, 0.08);
+          width: 100%;
+          border-radius: 13.3333px;
+          padding: 50px;
+          text-align: center;
+          @media only screen and (max-width: 768px) {
+            padding: 25px;
+          }
+          h3 {
+            font-size: 25px;
+            margin: 0;
+          }
+          span {
+            font-size: 13px;
+            font-weight: normal;
+          }
+          .socialContainer {
+            display: flex;
+            justify-content: center;
+          }
+
+          .socials {
+            background: rgba(255, 255, 255, 0.08);
+          }
+        }
+      }
+    }
+  }
+}

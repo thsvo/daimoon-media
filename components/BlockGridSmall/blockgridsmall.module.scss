@@ -1,0 +1,78 @@
+:local {
+  .container {
+    width: 100%;
+    .list {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      gap: 25px;
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .spotlight {
+        position: absolute;
+
+        bottom: -190px;
+        left: -40%;
+        z-index: -1;
+      }
+
+      .item {
+        max-width: 400px;
+        width: 25%;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 13px;
+        padding: 20px 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+        svg {
+          width: 40px;
+        }
+        .textContainer {
+          font-size: 20px;
+          b {
+            color: rgba(255, 255, 255, 1);
+          }
+          sub {
+            color: rgba(255, 255, 255, 0.5);
+            display: block;
+          }
+        }
+      }
+    }
+    .ctaContainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 25px;
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+      span {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 123%;
+        @media only screen and (max-width: 768px) {
+          text-align: center;
+          margin-bottom: 25px;
+        }
+        b {
+          color: #b165ed;
+        }
+      }
+      a {
+        width: 400px;
+      }
+    }
+  }
+}

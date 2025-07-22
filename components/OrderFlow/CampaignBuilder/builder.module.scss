@@ -1,0 +1,140 @@
+:local {
+  .container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    .pictures {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .image {
+        margin-right: 25px;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        border-radius: 8px;
+        border: rgba(42, 42, 42) 4px solid;
+        img {
+          border-radius: 8px;
+        }
+      }
+      .image_active {
+        width: 60px;
+        height: 60px;
+        img {
+          border-radius: 4px;
+        }
+      }
+      .image_active.spotify {
+        border: #1db954 4px solid;
+      }
+      .image_active.youtube {
+        border: #ff0000 4px solid;
+      }
+      .image_active.soundcloud {
+        border: #ff5502 4px solid;
+      }
+      .image_active.tiktok {
+        border: #ff0050 4px solid;
+      }
+    }
+    .builderFooterContainer {
+      margin-top: 45px;
+
+      @media only screen and (max-width: 768px) {
+        position: initial;
+        width: 100%;
+
+        margin-top: 10px;
+        margin-bottom: 70px;
+      }
+      .container {
+        display: flex;
+        width: 100%;
+
+        .buttons {
+          max-width: 470px;
+          display: flex;
+
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+            position: fixed;
+            background-color: black;
+            bottom: 0;
+            left: 0;
+            padding: 15px;
+            z-index: 1;
+          }
+
+          .back {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #1ed760;
+            background-color: transparent;
+            margin-right: 21px;
+            cursor: pointer;
+            border-radius: 6px;
+          }
+          div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            @media only screen and (max-width: 768px) {
+              width: 100%;
+            }
+            .next {
+              min-width: 300px;
+              width: 100%;
+              height: 50px;
+              background: #1ed760;
+              border-radius: 6px;
+              color: #fdfdfd;
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 20px;
+              border: none;
+              cursor: pointer;
+
+              &:disabled {
+                cursor: not-allowed;
+                opacity: 0.3;
+              }
+
+              @media only screen and (max-width: 768px) {
+                min-width: initial;
+              }
+            }
+            .cancel {
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 20px;
+              color: #808080;
+              margin-top: 15px;
+
+              cursor: pointer;
+
+              @media only screen and (max-width: 768px) {
+                position: initial;
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+        .paymentContainer {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .paymentList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+:local {
+  .sliderItem {
+    display: flex;
+    flex-direction: column;
+    margin-top: 26px;
+
+    label {
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      color: rgba(255, 255, 255, 0.3);
+
+      display: flex;
+      align-items: center;
+      span {
+        color: #fdfdfd;
+        margin-left: 10px;
+      }
+    }
+    label.spotifyLabel {
+      flex-direction: column;
+      font-size: 18px;
+      span {
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    .checkboxContainer {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 10px;
+
+      .checkbox {
+        /* Customize the label (the container) */
+
+        width: 16px;
+        height: 16px;
+        border: 1px solid #fdfdfd;
+        position: relative;
+        box-sizing: border-box;
+        border-radius: 4px;
+        //margin-left: 10px;
+        cursor: pointer;
+
+        /* Hide the browser's default checkbox */
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+        .checkmark {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 9px;
+          width: 9px;
+          background-color: #1db954;
+          margin-left: 0;
+        }
+        &:hover {
+          background-color: rgb(107, 107, 107);
+        }
+      }
+      span {
+        margin-left: 14px;
+        b {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

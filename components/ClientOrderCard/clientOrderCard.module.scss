@@ -1,0 +1,93 @@
+:local {
+  .container {
+    display: flex;
+    padding: 25px;
+    margin-bottom: 15px;
+    background-color: rgb(32, 32, 32);
+    border-radius: 3px;
+    transition: all ease-out 0.2s;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: #b165ed 1px solid;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      transition: all ease-in 0.2s;
+    }
+    .orderInfo {
+      display: flex;
+      gap: 25px;
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .CampaignInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 768px) {
+          align-items: flex-start;
+        }
+
+        .orderNumber {
+          margin-bottom: 10px;
+        }
+      }
+
+      .Campaigns {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @media only screen and (max-width: 768px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .serviceLabel {
+          border-radius: 4px;
+          padding: 5px 10px;
+
+          font-size: 11px;
+          b {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .CampaignActions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      label {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        @media only screen and (max-width: 768px) {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        &:hover {
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            width: 100%;
+
+            border-bottom: #b165ed 1px solid;
+          }
+        }
+      }
+    }
+  }
+}

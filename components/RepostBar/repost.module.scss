@@ -1,0 +1,31 @@
+:local {
+  .container {
+    width: 100%;
+    padding: 15px 40px;
+    background-color: rgb(32, 32, 32);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .details {
+      display: flex;
+      width: 40%;
+      justify-content: space-between;
+
+      font-size: 16px;
+
+      span b {
+        color: #636363;
+        font-weight: 400;
+      }
+    }
+    .scheduler {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-left: 25px;
+      }
+    }
+  }
+}

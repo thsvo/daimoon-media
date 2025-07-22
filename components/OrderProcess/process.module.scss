@@ -1,0 +1,13 @@
+:local {
+  .OrderContainer {
+    //margin-top: 100px;
+    //padding: 0px 100px;
+  }
+  .spotlight {
+    position: absolute;
+
+    left: -40%;
+    bottom: -30%;
+    z-index: -1;
+  }
+}

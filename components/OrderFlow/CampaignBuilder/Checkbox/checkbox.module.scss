@@ -1,0 +1,70 @@
+:local {
+  .sliderItem {
+    display: flex;
+    flex-direction: column;
+    margin-top: 26px;
+    label {
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      color: #fdfdfd;
+      display: flex;
+      align-items: center;
+    }
+    ul {
+      margin-top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li.checkboxContainer {
+        display: flex;
+        flex: 50%;
+        align-items: center;
+        cursor: pointer;
+
+        margin-top: 10px;
+        .checkbox {
+          /* Customize the label (the container) */
+
+          width: 13px;
+          height: 13px;
+          border: 1px solid #fdfdfd;
+          position: relative;
+          box-sizing: border-box;
+          border-radius: 4px;
+
+          cursor: pointer;
+
+          /* Hide the browser's default checkbox */
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+          .checkmark {
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            height: 13px;
+            width: 13px;
+            border-radius: 4px;
+            background-color: #1db954;
+            margin-left: 0;
+          }
+          &:hover {
+            background-color: rgb(107, 107, 107);
+          }
+        }
+        span {
+          margin-left: 14px;
+          b {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

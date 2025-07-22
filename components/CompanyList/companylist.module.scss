@@ -1,0 +1,55 @@
+:local {
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-700px);
+    }
+  }
+
+  @keyframes slide_reverse {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(700px);
+    }
+  }
+
+  .animate_slide {
+    animation: slide 60s linear infinite;
+  }
+  .animate_slide__reverse {
+    animation: slide_reverse 60s linear infinite;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .item {
+      width: 200px;
+      height: 75px;
+      position: relative;
+    }
+  }
+  .wrap {
+    flex-flow: wrap;
+  }
+
+  .swiper {
+    width: 100%;
+    overflow: visible;
+    z-index: 0;
+    // @media only screen and (max-width: 768px) {
+    //   overflow: visible;
+    // }
+  }
+}

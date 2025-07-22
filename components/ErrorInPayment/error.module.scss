@@ -1,0 +1,54 @@
+:local {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 170px;
+    position: relative;
+    .spotlightContainer {
+      position: absolute;
+      left: -25%;
+      z-index: -1;
+    }
+    .imageContainer {
+      position: absolute;
+      right: -80%;
+      top: 0;
+    }
+  }
+  .heroText {
+    max-width: 770px;
+
+    text-align: center;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+    h3 {
+      font-weight: 800;
+      font-size: 50px;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 36px;
+      }
+    }
+    p {
+      font-weight: 600;
+      font-size: 22px;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+    .labelText {
+      display: block;
+      font-weight: 400;
+      font-size: 18px;
+      color: rgb(113, 113, 113);
+      b {
+        cursor: pointer;
+        color: rgba(177, 101, 237, 1);
+      }
+    }
+  }
+}

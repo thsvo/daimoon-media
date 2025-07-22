@@ -1,0 +1,73 @@
+:local {
+  .container {
+    border: 5px solid #b165ed;
+    background-color: rgba(45, 45, 45, 1);
+    border-left: none;
+    border-right: none;
+    padding: 100px 0px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .faceContainer {
+      position: absolute;
+      right: -220px;
+      top: 0;
+      height: 100%;
+      width: 450px;
+
+      .daimoonFace {
+        height: 100%;
+
+        position: relative;
+      }
+    }
+
+    .buttonContainer {
+      margin-top: 50px;
+      a {
+        width: 400px;
+      }
+    }
+
+    .list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 50px;
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .item {
+        label {
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 148.4%;
+          color: #b165ed;
+        }
+
+        ul {
+          li {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 148.4%;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+
+            svg {
+              width: 12px;
+              height: 12px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

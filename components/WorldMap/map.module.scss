@@ -1,0 +1,72 @@
+:local {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+
+    //margin-top: 45px;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+
+    .map {
+      width: 100%;
+      margin-top: 31px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      svg {
+        width: 647px;
+        height: 331.01px;
+      }
+
+      .disclaimer {
+        margin-top: 25px;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+
+    .graphLabels {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      //margin-bottom: 20px;
+      .item {
+        background-color: rgb(38, 37, 37);
+        border-radius: 6px;
+        width: auto;
+        min-width: 400px;
+        height: 66px;
+        padding: 13px 15px 10px 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+        span {
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+
+          color: #fdfdfd;
+        }
+
+        sub {
+          color: rgba(255, 255, 255, 0.5);
+          font-weight: 600;
+          font-size: 12px;
+        }
+      }
+      .item:first-of-type {
+        margin-right: 27px;
+      }
+    }
+  }
+}

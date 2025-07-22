@@ -1,0 +1,312 @@
+:local {
+  .container {
+    width: auto;
+    max-width: 410px;
+    height: 52px;
+    padding: 15px 20px 15px 20px;
+
+    font-weight: 500;
+    border-radius: 15px;
+    border: none;
+    display: inline-flex;
+    text-transform: capitalize;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      transform: scale(1.05);
+    }
+    label.text {
+      color: #fdfdfd;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .discountContainer {
+      position: absolute;
+      right: 20px;
+
+      font-size: 14px;
+
+      background: rgb(177, 101, 237);
+      box-shadow: 0 0 10px rgb(116, 66, 155);
+      padding: 10px;
+      border-radius: 4px;
+    }
+  }
+
+  .spotify {
+    animation: light 6s infinite 1s;
+    -webkit-animation: light 6s infinite 1s;
+    background: -moz-linear-gradient(
+      -45deg,
+      #1db954 0%,
+      #1db954 40%,
+      #ffffff 50%,
+      #1db954 60%,
+      #1db954 100%
+    );
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      color-stop(0%, #1db954),
+      color-stop(40%, #1db954),
+      color-stop(50%, #ffffff),
+      color-stop(60%, #1db954),
+      color-stop(100%, #1db954)
+    );
+    background: -webkit-linear-gradient(
+      -45deg,
+      #1db954 0%,
+      #1db954 40%,
+      #ffffff 50%,
+      #1db954 60%,
+      #1db954 100%
+    );
+    background: -o-linear-gradient(
+      -45deg,
+      #1db954 0%,
+      #1db954 40%,
+      #ffffff 50%,
+      #1db954 60%,
+      #1db954 100%
+    );
+    background: -ms-linear-gradient(
+      -45deg,
+      #1db954 0%,
+      #1db954 40%,
+      #ffffff 50%,
+      #1db954 60%,
+      #1db954 100%
+    );
+    background: linear-gradient(
+      135deg,
+      #1db954 0%,
+      #1db954 40%,
+      #ffffff 50%,
+      #1db954 60%,
+      #1db954 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1db954', endColorstr='#1db954',GradientType=1 );
+    background-repeat: repeat;
+    background-position: 0px;
+    background-size: 300%;
+  }
+
+  .youtube {
+    animation: light 6s infinite 2s;
+    -webkit-animation: light 6s infinite 2s;
+    background: -moz-linear-gradient(
+      -45deg,
+      #e00 0%,
+      #e00 40%,
+      #ffffff 50%,
+      #e00 60%,
+      #e00 100%
+    );
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      color-stop(0%, #e00),
+      color-stop(40%, #e00),
+      color-stop(50%, #ffffff),
+      color-stop(60%, #e00),
+      color-stop(100%, #e00)
+    );
+    background: -webkit-linear-gradient(
+      -45deg,
+      #e00 0%,
+      #e00 40%,
+      #ffffff 50%,
+      #e00 60%,
+      #e00 100%
+    );
+    background: -o-linear-gradient(
+      -45deg,
+      #e00 0%,
+      #e00 40%,
+      #ffffff 50%,
+      #e00 60%,
+      #e00 100%
+    );
+    background: -ms-linear-gradient(
+      -45deg,
+      #e00 0%,
+      #e00 40%,
+      #ffffff 50%,
+      #e00 60%,
+      #e00 100%
+    );
+    background: linear-gradient(
+      135deg,
+      #e00 0%,
+      #e00 40%,
+      #ffffff 50%,
+      #e00 60%,
+      #e00 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e00', endColorstr='#e00',GradientType=1 );
+    background-repeat: repeat;
+    background-position: 0px;
+    background-size: 300%;
+  }
+
+  .soundcloud {
+    animation: light 6s infinite 3s;
+    -webkit-animation: light 6s infinite 3s;
+    background: -moz-linear-gradient(
+      -45deg,
+      #f50 0%,
+      #f50 40%,
+      #ffffff 50%,
+      #f50 60%,
+      #f50 100%
+    );
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      color-stop(0%, #f50),
+      color-stop(40%, #f50),
+      color-stop(50%, #ffffff),
+      color-stop(60%, #f50),
+      color-stop(100%, #f50)
+    );
+    background: -webkit-linear-gradient(
+      -45deg,
+      #f50 0%,
+      #f50 40%,
+      #ffffff 50%,
+      #f50 60%,
+      #f50 100%
+    );
+    background: -o-linear-gradient(
+      -45deg,
+      #f50 0%,
+      #f50 40%,
+      #ffffff 50%,
+      #f50 60%,
+      #f50 100%
+    );
+    background: -ms-linear-gradient(
+      -45deg,
+      #f50 0%,
+      #f50 40%,
+      #ffffff 50%,
+      #f50 60%,
+      #f50 100%
+    );
+    background: linear-gradient(
+      135deg,
+      #f50 0%,
+      #f50 40%,
+      #ffffff 50%,
+      #f50 60%,
+      #f50 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f50', endColorstr='#f50',GradientType=1 );
+    background-repeat: repeat;
+    background-position: 0px;
+    background-size: 300%;
+  }
+
+  .tiktok {
+    animation: light 6s infinite;
+    -webkit-animation: light 6s infinite;
+    background: -moz-linear-gradient(
+      -45deg,
+      #000000 0%,
+      #000000 40%,
+      #ffffff 50%,
+      #000000 60%,
+      #000000 100%
+    );
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      color-stop(0%, #000000),
+      color-stop(40%, #000000),
+      color-stop(50%, #ffffff),
+      color-stop(60%, #000000),
+      color-stop(100%, #000000)
+    );
+    background: -webkit-linear-gradient(
+      -45deg,
+      #000000 0%,
+      #000000 40%,
+      #ffffff 50%,
+      #000000 60%,
+      #000000 100%
+    );
+    background: -o-linear-gradient(
+      -45deg,
+      #000000 0%,
+      #000000 40%,
+      #ffffff 50%,
+      #000000 60%,
+      #000000 100%
+    );
+    background: -ms-linear-gradient(
+      -45deg,
+      #000000 0%,
+      #000000 40%,
+      #ffffff 50%,
+      #000000 60%,
+      #000000 100%
+    );
+    background: linear-gradient(
+      135deg,
+      #000000 0%,
+      #000000 40%,
+      #ffffff 50%,
+      #000000 60%,
+      #000000 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 );
+    background-repeat: repeat;
+    background-position: 0px;
+    background-size: 300%;
+  }
+
+  .normal {
+    background-color: rgba(177, 101, 237, 1);
+    justify-content: center;
+  }
+  .transparent {
+    background-color: transparent;
+    justify-content: center;
+    label.text {
+      color: rgba(177, 101, 237, 1);
+    }
+  }
+
+  @keyframes light {
+    0% {
+      background-position: -600px;
+    }
+    15% {
+      background-position: 0px;
+    }
+    100% {
+      background-position: 0px;
+    }
+  }
+
+  @-webkit-keyframes light {
+    0% {
+      background-position: -600px;
+    }
+    15% {
+      background-position: 0px;
+    }
+    100% {
+      background-position: 0px;
+    }
+  }
+}

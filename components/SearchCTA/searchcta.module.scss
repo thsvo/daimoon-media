@@ -1,0 +1,50 @@
+:local {
+  .serviceContainer {
+    display: flex;
+    height: 55px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid;
+    border-radius: 118.62px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    .item {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      margin-left: 3px;
+      margin-right: 3px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      cursor: pointer;
+      svg {
+        path {
+          fill: #484848;
+        }
+      }
+    }
+    .item.item__active {
+      svg {
+        path {
+          fill: #fdfdfd;
+        }
+      }
+    }
+  }
+  .altText {
+    color: #b165ed;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .container {
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

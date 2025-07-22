@@ -1,0 +1,227 @@
+:local {
+  .section_container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    //padding: 0 350px;
+    position: relative;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+
+    .section_header {
+      text-align: center;
+      .section_title {
+        line-height: 53.42px;
+        margin-bottom: 0;
+        font-size: 36px;
+        @media only screen and (max-width: 768px) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .SwiperAnimationContainer {
+    height: 500px;
+    //overflow-y: hidden;
+    margin-top: 50px;
+    @media only screen and (max-width: 768px) {
+      max-height: 250px;
+    }
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+
+    max-height: 360px;
+    position: initial;
+    overflow: visible;
+    @media only screen and (max-width: 768px) {
+      max-height: 250px;
+    }
+  }
+
+  .buttonNav {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%);
+    cursor: pointer;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .buttonPrev {
+    left: -67px;
+  }
+  .buttonNext {
+    right: -117px;
+  }
+
+  .pagination {
+    position: absolute;
+    text-align: center;
+    margin-top: 25px;
+    right: 0 !important;
+    left: 0 !important;
+    top: initial !important ;
+    bottom: -100px !important;
+    transform: initial;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slide {
+    background: rgba(37, 37, 37);
+    box-shadow: 2px 2px 6px black;
+    border-radius: 10px;
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    .background_image {
+      z-index: -1;
+    }
+
+    .content {
+      width: 50%;
+      padding: 50px 0 50px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        padding: 25px;
+      }
+      div.campaignInfo {
+        margin-top: 15px;
+        @media only screen and (max-width: 768px) {
+          display: flex;
+        }
+        .campaignsDetails {
+          display: flex;
+          span {
+            margin-right: 25px;
+          }
+          @media only screen and (max-width: 768px) {
+            flex-direction: column;
+          }
+        }
+        span {
+          font-size: 16px;
+          color: rgba(255, 255, 255, 0.26);
+        }
+
+        .results {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          margin-top: 15px;
+          margin-bottom: 5px;
+
+          label {
+            color: rgba(255, 255, 255, 0.26);
+            font-size: 16px;
+          }
+          li {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            span {
+              color: #fdfdfd;
+            }
+
+            svg {
+              margin: 0 10px;
+            }
+          }
+        }
+        .buttonContainer {
+          display: flex;
+          align-items: center;
+          margin-top: 50px;
+
+          a.alternative {
+            padding: 15px 30px 15px 30px;
+            border-radius: 15px;
+            border: 1px #fdfdfd solid;
+            //height: 62px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            margin-left: 25px;
+            cursor: pointer;
+          }
+        }
+      }
+      div {
+        h3 {
+          font-size: 36px;
+          margin-top: 0;
+          margin-bottom: 0;
+          @media only screen and (max-width: 768px) {
+            font-size: 21px;
+          }
+        }
+        span {
+          font-size: 16px;
+          @media only screen and (max-width: 768px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .imageContainer {
+      width: 50%;
+      height: 100%;
+      position: relative;
+      .spotlightContainer {
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        right: -100px;
+        top: -150px;
+      }
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+      .artistCover {
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
+        display: flex;
+
+        .imageTitle {
+          font-size: 11px;
+          font-weight: 700;
+          bottom: 40px;
+          right: -80px;
+          position: absolute;
+          text-shadow: 2px 2px black;
+          display: flex;
+          flex-direction: column;
+          em {
+            max-width: 200px;
+          }
+          span {
+            font-style: italic;
+            font-weight: 200;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

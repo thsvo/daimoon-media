@@ -1,0 +1,53 @@
+:local {
+  .container {
+    display: flex;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+
+    .inputContainer {
+      .input {
+        height: 60px;
+        width: 250px;
+        background-color: transparent;
+        border: none;
+        color: #fdfdfd;
+        &::placeholder {
+          font-size: 15px;
+        }
+        &:focus {
+          color: #fdfdfd;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+
+    .button {
+      width: 65px;
+      height: 60px;
+      background: #b165ed;
+      border-radius: 8px 8px 0px 0px;
+      border: none;
+      color: #fdfdfd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        svg {
+          height: 16px;
+          width: 16px;
+          transition: all ease-in 0.1s;
+        }
+      }
+      svg {
+        height: 12px;
+        width: 12px;
+        transition: all ease-in 0.1s;
+      }
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}

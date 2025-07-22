@@ -1,0 +1,22 @@
+:local {
+  .list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      span {
+        margin-top: 10px;
+
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+    .item__centered {
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+:local {
+  .container {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 7px;
+    width: 100%;
+    padding: 40px 80px;
+    @media only screen and (max-width: 768px) {
+      padding: 10px 20px;
+    }
+
+    .heading {
+      padding-left: 20px;
+      margin-bottom: 32px;
+      h3 {
+        font-size: 30px;
+        line-height: 148.4%;
+        margin: 0;
+        color: #b165ed;
+      }
+      span {
+        font-size: 21px;
+      }
+    }
+    .perksContainer {
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      gap: 15px;
+
+      .item {
+        width: calc(100% / 3 - 10px);
+        max-height: 200px;
+        height: auto;
+        background: rgba(196, 196, 196, 0.08);
+        border-radius: 10px;
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all ease-in 0.2s;
+
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+          height: auto;
+          max-height: initial;
+          justify-content: flex-start;
+        }
+
+        div {
+          h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            margin-top: 20px;
+            @media only screen and (max-width: 768px) {
+              font-size: 16px;
+            }
+          }
+          span {
+            font-size: 12px;
+            font-weight: 400;
+
+            @media only screen and (max-width: 768px) {
+              font-size: 12px;
+            }
+          }
+        }
+
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+
+        &:hover {
+          transition: all ease-in 0.2s;
+          transform: scale(1.05);
+          border: 1px solid #b165ed;
+        }
+      }
+    }
+  }
+}

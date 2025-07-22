@@ -1,0 +1,68 @@
+:local {
+  .container {
+    margin-top: 60px;
+    position: relative;
+
+    @media only screen and (max-width: 768px) {
+      margin-top: 0px;
+    }
+  }
+  .trustpilotContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    div {
+      width: 400px;
+    }
+  }
+  .CTAbutton {
+    background-color: transparent;
+    border-radius: 8px;
+    height: 40px;
+    padding: 0 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all ease-in-out 0.2s;
+    }
+  }
+  .swiper {
+    width: 100%;
+    overflow: visible;
+    z-index: 0;
+    // @media only screen and (max-width: 768px) {
+    //   overflow: visible;
+    // }
+  }
+  .review {
+    margin-right: 0;
+  }
+  .reviewPagination {
+    margin-top: 25px;
+    text-align: center;
+  }
+  .buttonNav {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .buttonPrev {
+    left: -40px;
+  }
+  .buttonNext {
+    right: -90px;
+  }
+}
