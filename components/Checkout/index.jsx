@@ -44,6 +44,7 @@ const Checkout = () => {
   const [allMethods, setAllMethods] = useState();
   const [checkUnfinishedCampaign, setCheckUnfinishedCampaign] = useState(false);
   const [unfinishedCampaignsArray, setUnfinishedCampaignsArray] = useState([]);
+  const [showMobileOrderDetails, setShowMobileOrderDetails] = useState(false);
   useEffect(() => {    // Extract campaign IDs from cart
     const campaignIds = context.order.campaigns
       .flatMap((e) => e.campaigns)
@@ -251,6 +252,101 @@ const Checkout = () => {
           </div>
         ) : (
           <>
+            {/* Mobile Order Summary Header */}
+            <div className={styles.mobileOrderSummary}>
+              <div 
+                className={styles.mobileOrderHeader}
+                onClick={() => setShowMobileOrderDetails(!showMobileOrderDetails)}
+              >
+                <span>Click for order details</span>
+                <div className={styles.mobileOrderPrice}>
+                  <span>${Math.round(context.order.totalPriceDetails.amount_local_incl_vat)} {context.order.currency.code}</span>
+                  <ArrowDown className={showMobileOrderDetails ? styles.arrowRotated : ''} />
+                </div>
+              </div>
+              
+              {showMobileOrderDetails && (
+                <div className={styles.mobileOrderDetails}>
+                  <div className={styles.mobileOrderContent}>
+                    {/* Show campaigns */}
+                    {context.order.campaigns.map(
+                      (e) =>
+                        e.campaigns != 0 &&
+                        e.campaigns.map((item, index) => (
+                          <section
+                            key={index}
+                            className={[
+                              styles.mobileServiceSection,
+                              e.service == 'spotify'
+                                ? styles.mobileServiceSection_spotify
+                                : e.service == 'youtube'
+                                ? styles.mobileServiceSection_youtube
+                                : e.service == 'tiktok'
+                                ? styles.mobileServiceSection_tiktok
+                                : e.service == 'soundcloud' &&
+                                  styles.mobileServiceSection_soundcloud,
+                            ].join(' ')}
+                          >
+                            <ProductCard
+                              service={e.service}
+                              checkout={false}
+                              key={index}
+                              content={item}
+                            />
+                          </section>
+                        ))
+                    )}
+                    
+                    {/* Coupon section */}
+                    <div className={styles.mobileCouponContainer}>
+                      <input
+                        className={styles.mobileCouponInput}
+                        id='mobile-coupon'
+                        name='mobile-coupon'
+                        type='text'
+                        ref={CouponField}
+                        placeholder={'Coupon code'}
+                      />
+                      <div
+                        className={styles.mobileCouponButton}
+                        onClick={() =>
+                          setCoupon(CouponField.current.value.trim())
+                        }
+                      >
+                        <ArrowNext />
+                      </div>
+                    </div>
+                    
+                    {/* Price breakdown */}
+                    <div className={styles.mobilePriceBreakdown}>
+                      {(context.order.customerDetails.country &&
+                        context.order.customerDetails.country.eu) == true && (
+                        <div className={styles.mobileVatLine}>
+                          <span>21% VAT</span>
+                          <span>${(
+                            context.order.totalPriceDetails.amount_local_incl_vat -
+                            context.order.totalPriceDetails.amount_local_excl_vat
+                          ).toFixed(2)} {context.order.currency.code}</span>
+                        </div>
+                      )}
+                      
+                      <div className={styles.mobileTotalLine}>
+                        <span>Total</span>
+                        <span>${Math.round(context.order.totalPriceDetails.amount_local_incl_vat)} {context.order.currency.code}</span>
+                      </div>
+                      
+                      {context.order.currency.code != 'EUR' && (
+                        <div className={styles.mobileEuroNotice}>
+                          <span>Payment will be made in EUR</span>
+                          <span>{Math.round(context.order.totalPriceDetails.amount_EUR_incl_vat)} EUR</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <div className={styles.content}>
               {/* <ImportantNotice /> */}
               <Trustpilot></Trustpilot>
@@ -634,11 +730,42 @@ const Checkout = () => {
               </div>
               <h2>
                 {breadcrumb == 'personal'
-                  ? 'Begin checkout'
+                  ? 'Checkout: Introduce yourself'
                   : breadcrumb == 'billing'
                   ? 'Checkout: Address information'
                   : 'How would you like to pay?'}
               </h2>
+
+              {/* Mobile Payment Options */}
+              <div className={styles.mobilePaymentSection}>
+                <h2 className={styles.mobileBeginCheckout}>Begin checkout</h2>
+                
+                <div className={styles.mobilePaymentButtons}>
+                  <button className={styles.mobileApplePay}>
+                    <Image src="/apple.png" alt="Apple Pay" width={20} height={20} />
+                    <span>Pay</span>
+                  </button>
+                  
+                  <button className={styles.mobilePayWithLink}>
+                    <span>Pay with </span>
+                    <span className={styles.linkLogo}>🔗 link</span>
+                  </button>
+                  
+                  <button className={styles.mobileGooglePay}>
+                    <span>Buy with </span>
+                    <Image src="/google.png" alt="Google" width={16} height={16} />
+                    <span> Pay</span>
+                  </button>
+                </div>
+                
+                <div className={styles.mobileExpressNotice}>
+                  <span>By using express checkout, we&apos;ll use your contact details from this provider.</span>
+                </div>
+                
+                <div className={styles.mobileOrDivider}>
+                  <span>or pay another way</span>
+                </div>
+              </div>
 
               {breadcrumb == 'payment' && (
                 <span className={styles.extraCostsNotice}>
@@ -647,12 +774,15 @@ const Checkout = () => {
                 </span>
               )}
 
-              <PaymentForm
-                breadcrumb={breadcrumb}
-                setBreadcrumb={setBreadcrumb}
-                setLoading={setLoading}
-                methods={allMethods}
-              />
+              {/* Desktop PaymentForm - hidden on mobile */}
+              <div className={styles.desktopPaymentForm}>
+                <PaymentForm
+                  breadcrumb={breadcrumb}
+                  setBreadcrumb={setBreadcrumb}
+                  setLoading={setLoading}
+                  methods={allMethods}
+                />
+              </div>
             </div>
           </>
         )}

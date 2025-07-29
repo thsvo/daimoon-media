@@ -15,7 +15,7 @@ const TrustpilotScriptLoader = () => {
       onLoad={() => {
         // Dispatch custom event to signal Trustpilot has loaded
         window.dispatchEvent(new Event('trustpilot-loaded'));
-        console.log('Trustpilot script loaded successfully');
+        // console.log('Trustpilot script loaded successfully');
       }}
       onError={() => {
         console.warn('Trustpilot script failed to load, attempting retry...');

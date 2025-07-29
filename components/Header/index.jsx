@@ -932,36 +932,7 @@ const Header = () => {
         {!isAffiliatePath && (
           !isMobileView ? (
             !router.pathname.includes('/checkout') && (
-              !router.pathname.includes('/campaigns/spotify-promotion') ? ( // If IS spotify-promotion, show 100% Organic div
-                <div
-                  style={{
-                    backgroundImage: 'linear-gradient(#242424, #2b2b2b, #242424)',
-                    // transform: isScrolled ? 'translateY(-100%)' : 'translateY(0)',
-                    // transition: 'all 0.2s ease-in-out',
-                    //Blackfriday styling
-                    marginTop: isScrolled ? '63px' : '0',
-                    //overflow: 'hidden',
-                  }}
-                  className='h-14 px-14 flex center gap-40'
-                >
-                  <div className='flex center gap-2 text-[#888888]'>
-                    <VerifiedCheck />
-                    100% Organic
-                  </div>
-                  <div className='flex center gap-2 text-[#888888]'>
-                    <Diamond />
-                    Premium Campaigns
-                  </div>
-                  <div className='flex center gap-2 text-[#888888]'>
-                    <ShakingHands />
-                    Your Music Promo Partner
-                  </div>
-                  <div className='flex center gap-2 text-[#888888]'>
-                    <ConversationBubble />
-                    Fast Communication
-                  </div>
-                </div>
-              ) : ( // If NOT spotify-promotion, show Trending Playlist div
+              router.pathname.includes('/campaigns/spotify-promotion') ? ( // If IS spotify-promotion, show Trending Playlist div
                 <div
                   style={{
                     backgroundImage: "linear-gradient(#242424, #2b2b2b, #242424)",
@@ -1014,30 +985,38 @@ const Header = () => {
                     Fast Communication
                   </div>
                 </div>
+              ) : ( // If NOT spotify-promotion, show 100% Organic div
+                <div
+                  style={{
+                    backgroundImage: 'linear-gradient(#242424, #2b2b2b, #242424)',
+                    // transform: isScrolled ? 'translateY(-100%)' : 'translateY(0)',
+                    // transition: 'all 0.2s ease-in-out',
+                    //Blackfriday styling
+                    marginTop: isScrolled ? '63px' : '0',
+                    //overflow: 'hidden',
+                  }}
+                  className='h-14 px-14 flex center gap-40'
+                >
+                  <div className='flex center gap-2 text-[#888888]'>
+                    <VerifiedCheck />
+                    100% Organic
+                  </div>
+                  <div className='flex center gap-2 text-[#888888]'>
+                    <Diamond />
+                    Premium Campaigns
+                  </div>
+                  <div className='flex center gap-2 text-[#888888]'>
+                    <ShakingHands />
+                    Your Music Promo Partner
+                  </div>
+                  <div className='flex center gap-2 text-[#888888]'>
+                    <ConversationBubble />
+                    Fast Communication
+                  </div>
+                </div>
               )
             )
-          ) : (
-            <div
-              style={{
-                backgroundImage: 'linear-gradient(#242424, #2b2b2b, #242424)',
-              }}
-              className='h-14 px-4 gap-4 flex center'
-            >
-              {router.pathname.includes('/campaigns/spotify-promotion')
-                ? displaySpotifyItems.map((item, index) => (
-                    <div key={index} className='flex center gap-2 text-[#888888]'>
-                      {item.icon}
-                      {item.text}
-                    </div>
-                  ))
-                : displayItems.map((item, index) => (
-                    <div key={index} className='flex center gap-2 text-[#888888]'>
-                      {item.icon}
-                      {item.text}
-                    </div>
-                  ))}
-            </div>
-          )
+          ) : null
         )}
       </>
     );

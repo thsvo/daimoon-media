@@ -6,20 +6,6 @@ export default function Document() {
       
         <link rel="icon" href="/logo/favicon.ico" />
         
-        {/* Google Pay API */}
-        <script src="https://pay.google.com/gp/p/js/pay.js" async></script>
-        
-        {/* Preload Vidalytics scripts for faster video loading */}
-        <link 
-          rel="preload" 
-          href="https://fast.vidalytics.com/embeds/jHQdYB2g/_RqtISwn23ClNDlE/loader.min.js" 
-          as="script" 
-        />
-        <link 
-          rel="preload" 
-          href="https://fast.vidalytics.com/embeds/jHQdYB2g/_RqtISwn23ClNDlE/player.min.js" 
-          as="script" 
-        />
         
         {/* Google Tag Manager */}
         <script

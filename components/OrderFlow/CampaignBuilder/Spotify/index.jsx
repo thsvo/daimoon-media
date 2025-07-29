@@ -426,100 +426,63 @@ const CampaignBuilderItem = (props) => {
 
         <div className={styles.builderFooterContainer}>
           <div className={styles.container}>
-            {/* Desktop: Show buttons section */}
-            {width > 768 && (
-              <div className={styles.buttons}>
-                {validValues == true ? (
-                  <>
-                    <button
-                      style={{ borderColor: color }}
-                      className={styles.back}
-                      onClick={
-                        active == 0
-                          ? () => toggleBuilder({ toggle: false, index: 0 })
-                          : () => setActive(active - 1)
-                      }
-                    >
-                      <ArrowBack color={color} />
-                    </button>
-                    <div>
-                      {checkOut == true && unfinishedcampaigns == 'false' ? (
-                        <button
-                          style={{ backgroundColor: color }}
-                          onClick={() => (
-                            saveCampaign(items.length - 1, items[active], true),
-                            router.push('/campaigns/checkout')
-                          )}
-                          className={styles.next}
-                          disabled={
-                            !genre.main ? true : genre.main == 'invalid' && true
-                          }
-                        >
-                          {'Back to checkout'}
-                        </button>
-                      ) : items.length - 1 == active ? (
-                        <button
-                          style={{ backgroundColor: color }}
-                          onClick={() => {
-                            saveCampaign(items.length - 1, items[active], true);
-                            router.push('/campaigns/checkout');
-                          }}
-                          className={styles.next}
-                          disabled={
-                            !genre.main ? true : genre.main == 'invalid' && true
-                          }
-                        >
-                          {'Save & continue'}
-                        </button>
-                      ) : (
-                        <button
-                          style={{ backgroundColor: color }}
-                          onClick={() =>
-                            saveCampaign(items.length - 1, items[active])
-                          }
-                          className={styles.next}
-                          disabled={!genre.main && true}
-                        >
-                          Next Song
-                        </button>
-                      )}
-
-                      {active != 0 && (
-                        <span
-                          onClick={() => (
-                            toggleBuilder({ toggle: false, index: 0 }),
-                            saveCampaign(items.length - 1, items[active])
-                          )}
-                          className={styles.cancel}
-                        >
-                          Back to song overview
-                        </span>
-                      )}
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <button
-                      style={{ borderColor: color }}
-                      className={styles.back}
-                      onClick={
-                        active == 0
-                          ? () => toggleBuilder({ toggle: false, index: 0 })
-                          : () => setActive(active - 1)
-                      }
-                    >
-                      <ArrowBack color={color} />
-                    </button>
-                    <div>
+            <div className={styles.buttons}>
+              {validValues == true ? (
+                <>
+                  <button
+                    style={{ borderColor: color }}
+                    className={styles.back}
+                    onClick={
+                      active == 0
+                        ? () => toggleBuilder({ toggle: false, index: 0 })
+                        : () => setActive(active - 1)
+                    }
+                  >
+                    <ArrowBack color={color} />
+                  </button>
+                  <div>
+                    {checkOut == true && unfinishedcampaigns == 'false' ? (
                       <button
                         style={{ backgroundColor: color }}
+                        onClick={() => (
+                          saveCampaign(items.length - 1, items[active], true),
+                          router.push('/campaigns/checkout')
+                        )}
                         className={styles.next}
-                        type='button'
-                        disabled
+                        disabled={
+                          !genre.main ? true : genre.main == 'invalid' && true
+                        }
                       >
-                        Please, select valid values
+                        {'Back to checkout'}
                       </button>
+                    ) : items.length - 1 == active ? (
+                      <button
+                        style={{ backgroundColor: color }}
+                        onClick={() => {
+                          saveCampaign(items.length - 1, items[active], true);
+                          router.push('/campaigns/checkout');
+                        }}
+                        className={styles.next}
+                        disabled={
+                          !genre.main ? true : genre.main == 'invalid' && true
+                        }
+                      >
+                        {'Save & continue'}
+                      </button>
+                    ) : (
+                      <button
+                        style={{ backgroundColor: color }}
+                        onClick={() =>
+                          saveCampaign(items.length - 1, items[active])
+                        }
+                        className={styles.next}
+                        disabled={!genre.main && true}
+                      >
+                        Next Song
+                      </button>
+                    )}
 
+                    {active != 0 && (
                       <span
                         onClick={() => (
                           toggleBuilder({ toggle: false, index: 0 }),
@@ -529,11 +492,45 @@ const CampaignBuilderItem = (props) => {
                       >
                         Back to song overview
                       </span>
-                    </div>
-                  </>
-                )}
-              </div>
-            )}
+                    )}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <button
+                    style={{ borderColor: color }}
+                    className={styles.back}
+                    onClick={
+                      active == 0
+                        ? () => toggleBuilder({ toggle: false, index: 0 })
+                        : () => setActive(active - 1)
+                    }
+                  >
+                    <ArrowBack color={color} />
+                  </button>
+                  <div>
+                    <button
+                      style={{ backgroundColor: color }}
+                      className={styles.next}
+                      type='button'
+                      disabled
+                    >
+                      Please, select valid values
+                    </button>
+
+                    <span
+                      onClick={() => (
+                        toggleBuilder({ toggle: false, index: 0 }),
+                        saveCampaign(items.length - 1, items[active])
+                      )}
+                      className={styles.cancel}
+                    >
+                      Back to song overview
+                    </span>
+                  </div>
+                </>
+              )}
+            </div>
             <div className={styles.paymentContainer}>
               <span>We accept:</span>
               <div className={styles.paymentList}>

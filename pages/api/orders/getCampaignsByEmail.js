@@ -12,8 +12,7 @@ const handler = (req, res) => {
         }&pp=10&p=${pageNumber}`,
         headers: {
           'Accept-Encoding': 'null',
-          Authorization:
-            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJEYWltb29uTWVkaWEiLCJuYW1lIjoiVG9tIEJvc2NoIiwiaWF0IjoxNTE2MjM5MDIyfQ.EJBsjXIhyKyM_L6B635nbfg_Q69Lf24Fb1hpHhLCP20',
+          Authorization: 'Bearer ' + process.env.NEXT_PUBLIC_OMS_BEARER,
         },
       };
 

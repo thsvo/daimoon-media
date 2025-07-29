@@ -11,10 +11,10 @@ export default function CookieBanner() {
         // Check if user is from EU/EEA/UK countries
         const response = await fetch('/api/geo/eu-check');
         const geoData = await response.json();
-        console.log(`country check ${geoData.cookieCompliance?.userCountry}`)
+        // console.log(`country check ${geoData.cookieCompliance?.userCountry}`)
         // Only proceed with cookie banner logic if user is from allowed countries
         if (!geoData.showCookieBanner) {
-          console.log(`No cookie compliance needed for: ${geoData.cookieCompliance?.userCountry || 'unknown location'}`);
+          // console.log(`No cookie compliance needed for: ${geoData.cookieCompliance?.userCountry || 'unknown location'}`);
           setShowBanner(false);
           return;
         }

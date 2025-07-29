@@ -13,7 +13,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Cookies from 'universal-cookie';
 
 import { PostOrder, UpdateOrder } from '/lib/ExistingOrder';
-import ExpressCheckout from '/components/ExpressCheckout';
+import { gtmPushEvent } from '/lib/Analytics/gtm';
 
 import ArrowBack from '/public/icons/arrow_back';
 import ArrowDown from '/public/icons/arrow_down';
@@ -359,6 +359,20 @@ const PaymentForm = (props) => {
       if (!Object.keys(error).length) {
         setErrors({});
         setBreadcrumb('billing');
+        
+        // Track progression to billing step
+        gtmPushEvent('checkout_step_completed', {
+          step_name: 'personal_details',
+          step_number: 1,
+          form_data: {
+            first_name: values.first_name,
+            last_name: values.last_name,
+            email: values.email,
+            has_phone: phone ? true : false,
+            has_birthday: values.birthday ? true : false
+          },
+          timestamp: new Date().toISOString()
+        });
       } else {
         setErrors(error);
       }
@@ -395,6 +409,22 @@ const PaymentForm = (props) => {
       if (!Object.keys(error).length) {
         setErrors({});
         setBreadcrumb('payment');
+        
+        // Track progression to payment step
+        gtmPushEvent('checkout_step_completed', {
+          step_name: 'billing_details',
+          step_number: 2,
+          form_data: {
+            address: values.address,
+            city: values.city,
+            postal_code: values.postal_code,
+            country: values.countryCode,
+            is_business: business,
+            has_vat_number: businessVAT ? true : false,
+            terms_accepted: terms
+          },
+          timestamp: new Date().toISOString()
+        });
       } else {
         setErrors(error);
       }
@@ -455,6 +485,59 @@ const PaymentForm = (props) => {
                 chamber_of_commerce: businessCOC,
               },
             };
+
+            // Log customer details for debugging
+            console.log('Payment form submitted with customer details:', {
+              customer_info: {
+                email: values.email,
+                phone: phone,
+                first_name: values.first_name,
+                last_name: values.last_name,
+                address: values.address,
+                country: values.country,
+                city: values.city,
+                postal_code: values.postal_code,
+                date_of_birth: values.birthday
+              },
+              order_details: {
+                total: context.order.totalPriceDetails.amount_EUR_incl_vat,
+                currency: 'EUR',
+                method: activeMethod,
+                campaigns: context.order.campaigns
+              }
+            });
+
+            // Push form submission data to GTM
+            gtmPushEvent('checkout_form_submitted', {
+              form_step: 'payment_submission',
+              customer_info: {
+                email: values.email,
+                phone: phone,
+                first_name: values.first_name,
+                last_name: values.last_name,
+                address: values.address,
+                country: values.country,
+                city: values.city,
+                postal_code: values.postal_code,
+                date_of_birth: values.birthday
+              },
+              order_info: {
+                total: context.order.totalPriceDetails.amount_EUR_incl_vat,
+                currency: 'EUR',
+                payment_method: activeMethod,
+                order_id: cookies.get('orderId'),
+                items: context.order.campaigns.flatMap(service => 
+                  service.campaigns.map(campaign => ({
+                    item_id: campaign.id,
+                    item_name: campaign.campaignObject?.track || campaign.campaignObject?.name || '',
+                    category: service.service,
+                    price: campaign.totalPrice || 0,
+                    quantity: 1
+                  }))
+                )
+              },
+              timestamp: new Date().toISOString()
+            });
 
             const body = {
               ...context.order,
@@ -550,17 +633,95 @@ const PaymentForm = (props) => {
     }
 
     context.addExtraCosts(extraCost);
+    
+    // Track payment method selection
+    gtmPushEvent('payment_method_selected', {
+      step_name: 'payment_method_selection',
+      step_number: 3,
+      payment_method: method.description,
+      payment_method_id: method.id,
+      extra_cost_factor: extraCost,
+      order_total: context.order.totalPriceDetails.amount_EUR_incl_vat,
+      timestamp: new Date().toISOString()
+    });
+  };
+
+  // Test function for GTM tracking (development only)
+  const testPaymentFormGTM = () => {
+    console.log('Testing PaymentForm GTM tracking...');
+    
+    // Test checkout step completion
+    gtmPushEvent('checkout_step_completed', {
+      step_name: 'test_step',
+      step_number: 99,
+      form_data: {
+        first_name: formik.values.first_name || 'John',
+        last_name: formik.values.last_name || 'Doe', 
+        email: formik.values.email || 'test@example.com',
+        address: formik.values.address || '123 Test St',
+        city: formik.values.city || 'Test City',
+        country: formik.values.countryCode || 'NL'
+      },
+      timestamp: new Date().toISOString()
+    });
+
+    // Test payment method selection
+    gtmPushEvent('payment_method_selected', {
+      step_name: 'test_payment_method',
+      payment_method: 'Test Credit Card',
+      payment_method_id: 'test_cc',
+      order_total: 99.99,
+      timestamp: new Date().toISOString()
+    });
+
+    // Test form submission
+    gtmPushEvent('checkout_form_submitted', {
+      form_step: 'test_submission',
+      customer_info: {
+        email: formik.values.email || 'test@example.com',
+        first_name: formik.values.first_name || 'John',
+        last_name: formik.values.last_name || 'Doe'
+      },
+      order_info: {
+        total: 99.99,
+        currency: 'EUR',
+        payment_method: 'test_method'
+      },
+      timestamp: new Date().toISOString()
+    });
+
+    console.log('GTM test events sent! Check your browser console and GTM preview.');
   };
 
   return (
-    <motion.form onKeyDown={onKeyDown} Layout onSubmit={formik.handleSubmit}>
+    <>
+      {/* GTM Test Button - Development Only */}
+      {process.env.NODE_ENV === 'development' && (
+        <button 
+          type="button" 
+          onClick={testPaymentFormGTM}
+          style={{
+            position: 'fixed',
+            top: '50px',
+            right: '10px',
+            backgroundColor: '#28a745',
+            color: 'white',
+            padding: '8px 12px',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            zIndex: 9999,
+            fontSize: '12px'
+          }}
+        >
+          Test PaymentForm GTM
+        </button>
+      )}
+
+      <motion.form onKeyDown={onKeyDown} Layout onSubmit={formik.handleSubmit}>
       <AnimatePresence>
         {breadcrumb == 'personal' && (
           <>
-            <div className={styles.checkoutHeader}>
-              {/* <h2>Begin checkout</h2> */}
-            </div>
-            <ExpressCheckout />
             <motion.div className={styles.formFields} key='presonal'>
               <div className={styles.inputFields}>
                 <div className={styles.row}>
@@ -948,6 +1109,7 @@ const PaymentForm = (props) => {
         )}
       </AnimatePresence>
     </motion.form>
+    </>
   );
 };
 
