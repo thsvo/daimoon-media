@@ -123,7 +123,7 @@ export const ClientCampaignSatisfaction = ({
             padding: 15,
             marginBottom: 0,
             border: "1px solid #e0e0e0",
-            fontSize: 14,
+            fontSize: 18,
             fontWeight: 400,
             resize: "none",
             fontFamily: "Inter",

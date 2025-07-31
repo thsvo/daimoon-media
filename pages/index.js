@@ -80,17 +80,19 @@ const Home = (props) => {
         <br />
 
         {/* Second Trustpilot Widget with consistent positioning */}
-        <div className="w-full mx-auto text-center">
-          <TrustpilotWidget
-            templateId="5419b637fa0340045cd0c936"
-            scale={1.3}
-            mobileScale={1.4}
-            iframeHeight="100px"
-            mobileIframeHeight="90px"
-            styleHeight="80px"
-            showScript={false}
-          />
-        </div>
+       <div className="w-full max-w-none mx-auto text-center hidden sm:block">
+                        <div className="flex justify-center items-center w-full">
+                          <TrustpilotWidget
+                            templateId="5419b637fa0340045cd0c936"
+                            scale={1.3}
+                            mobileScale={1.4}
+                            iframeHeight="100px"
+                            mobileIframeHeight="90px"
+                            styleHeight="80px"
+                            showScript={false}
+                          />
+                        </div>
+                      </div>
         <div ref={resultsRef}></div>
         <div>
           <Results />

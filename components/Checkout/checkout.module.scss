@@ -6,155 +6,6 @@
       width: calc(100% - 45px);
       flex-direction: column;
     }
-    
-    /* Mobile Order Summary Styles */
-    .mobileOrderSummary {
-      @media only screen and (max-width: 768px) {
-        display: block;
-        margin-bottom: 20px;
-        background-color: #252525;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      @media only screen and (min-width: 769px) {
-        display: none;
-      }
-      
-      .mobileOrderHeader {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-        cursor: pointer;
-        font-weight: 600;
-        
-        .mobileOrderPrice {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-weight: 700;
-          font-size: 18px;
-          
-          svg {
-            transition: transform 0.3s ease;
-            width: 16px;
-            height: 16px;
-          }
-          
-          .arrowRotated {
-            transform: rotate(180deg);
-          }
-        }
-      }
-      
-      .mobileOrderDetails {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        
-        .mobileOrderContent {
-          padding: 20px;
-          
-          .mobileServiceSection {
-            margin-bottom: 15px;
-            padding: 15px;
-            border-radius: 8px;
-            position: relative;
-            
-            &.mobileServiceSection_spotify {
-              border: 1px solid #1ed760;
-            }
-            &.mobileServiceSection_youtube {
-              border: 1px solid #e00;
-            }
-            &.mobileServiceSection_tiktok {
-              border: 1px solid #ff0050;
-            }
-            &.mobileServiceSection_soundcloud {
-              border: 1px solid #ff5502;
-            }
-          }
-          
-          .mobileCouponContainer {
-            display: flex;
-            gap: 10px;
-            margin: 20px 0;
-            
-            .mobileCouponInput {
-              flex: 1;
-              height: 45px;
-              background: rgba(255, 255, 255, 0.08);
-              border-radius: 6px;
-              padding: 0 15px;
-              color: #fdfdfd;
-              border: none;
-              font-size: 14px;
-              
-              &:focus {
-                outline: none;
-              }
-              
-              &::placeholder {
-                color: rgba(255, 255, 255, 0.5);
-              }
-            }
-            
-            .mobileCouponButton {
-              width: 45px;
-              height: 45px;
-              background-color: #b165ed;
-              border-radius: 6px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              cursor: pointer;
-              
-              svg {
-                fill: #fdfdfd;
-              }
-            }
-          }
-          
-          .mobilePriceBreakdown {
-            .mobileVatLine, .mobileTotalLine {
-              display: flex;
-              justify-content: space-between;
-              margin: 8px 0;
-              
-              span:first-child {
-                color: rgba(255, 255, 255, 0.7);
-                font-size: 14px;
-              }
-              
-              span:last-child {
-                font-weight: 600;
-                font-size: 14px;
-              }
-            }
-            
-            .mobileTotalLine {
-              border-top: 1px solid rgba(255, 255, 255, 0.1);
-              padding-top: 10px;
-              margin-top: 10px;
-              
-              span {
-                font-weight: 700;
-                font-size: 16px;
-              }
-            }
-            
-            .mobileEuroNotice {
-              display: flex;
-              justify-content: space-between;
-              margin-top: 5px;
-              
-              span {
-                font-size: 12px;
-                color: rgba(255, 255, 255, 0.5);
-              }
-            }
-          }
-        }
-      }
-    }
     .content {
       width: 460px;
       font-weight: 700;
@@ -162,7 +13,6 @@
 
       @media only screen and (max-width: 768px) {
         width: 100%;
-        display: none; /* Hide desktop content on mobile */
       }
 
       h3 {
@@ -353,6 +203,10 @@
 
               .item {
                 cursor: not-allowed;
+
+                &:hover {
+                  //display: none;
+                }
               }
               &:after {
                 content: 'Coming soon';
@@ -523,117 +377,6 @@
         color: rgba(255, 255, 255, 0.3);
         font-weight: bold;
         font-size: 13px;
-      }
-
-      /* Mobile Payment Section */
-      .mobilePaymentSection {
-        @media only screen and (max-width: 768px) {
-          display: block;
-        }
-        @media only screen and (min-width: 769px) {
-          display: none;
-        }
-        
-        .mobileBeginCheckout {
-          font-size: 24px;
-          font-weight: 700;
-          margin: 20px 0;
-          color: #fdfdfd;
-        }
-        
-        .mobilePaymentButtons {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          margin: 20px 0;
-          
-          button {
-            height: 50px;
-            border-radius: 8px;
-            border: none;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-            
-            &:hover {
-              transform: translateY(-1px);
-            }
-          }
-          
-          .mobileApplePay {
-            background-color: #000;
-            color: #fff;
-            gap: 8px;
-            
-            span {
-              font-size: 18px;
-            }
-          }
-          
-          .mobilePayWithLink {
-            background-color: #00D924;
-            color: #fff;
-            
-            .linkLogo {
-              font-weight: 700;
-            }
-          }
-          
-          .mobileGooglePay {
-            background-color: #000;
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            gap: 4px;
-          }
-        }
-        
-        .mobileExpressNotice {
-          text-align: center;
-          margin: 15px 0;
-          
-          span {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.6);
-            line-height: 1.4;
-          }
-        }
-        
-        .mobileOrDivider {
-          text-align: center;
-          margin: 25px 0;
-          position: relative;
-          
-          &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.2);
-            z-index: 1;
-          }
-          
-          span {
-            background-color: rgb(37, 37, 37);
-            padding: 0 15px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.6);
-            position: relative;
-            z-index: 2;
-          }
-        }
-      }
-      
-      /* Desktop PaymentForm visibility */
-      .desktopPaymentForm {
-        @media only screen and (max-width: 768px) {
-          display: none;
-        }
       }
 
       .overlay {

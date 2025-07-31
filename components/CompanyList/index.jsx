@@ -24,313 +24,102 @@ import theorchard from "/public/images/companies/theorchard.png";
 
 const CompanyList = (props) => {
   const { wrap } = props;
+
+  const companiesFirstRow = [
+    { href: "https://daimoon.market/", src: daimoonmarket },
+    { href: "https://app.monetunes.com/signup/602337", src: monetunes },
+    { href: null, src: awal },
+    { href: null, src: theorchard },
+    {
+      href: "https://www.omarimc.com/best-spotify-promotion-companies-how-to-legitimately-boost-plays/?wpam_id=241",
+      src: omari,
+    },
+    { href: "https://earthweb.com/daimoon-media/", src: earthweb },
+    {
+      href: "https://www.getplaylisted.com/post/best-spotify-promotion-services-2023-the-ultimate-list",
+      src: getplaylisted,
+    },
+    {
+      href: "https://musicreviewworld.com/best-spotify-pitching-service/",
+      src: musicreviewworld,
+    },
+  ];
+
+  const companiesSecondRow = [
+    {
+      href: "https://www.mysteryfreedom.com/post/music-promotion-services-who-is-the-best",
+      src: mysteryfreedom,
+    },
+    {
+      href: "https://organicmusicpromo.com/daimoon-media-review/",
+      src: organicmusicpromo,
+    },
+    {
+      href: "https://orionpromotion.com/the-top-5-best-spotify-playlist-services-by-orion?a_ref=660afd7b3cae5",
+      src: orion,
+    },
+    {
+      href: "https://soundcamps.com/blog/best-spotify-pitching-service?ref=tom61",
+      src: soundcampaign,
+      alt: "Soundcampaign",
+    },
+    {
+      href: "https://twostorymelody.com/daimoon-media-review/",
+      src: twostorymelody,
+    },
+  ];
+
+  const repeatedCompaniesFirstRow = Array(5).fill(companiesFirstRow).flat();
+  const repeatedCompaniesSecondRow = Array(5).fill(companiesSecondRow).flat();
+
+  const renderCompany = (company, index, prefix) => {
+    const content = (
+      <div className="w-[200px] h-[50px] relative">
+        <Image
+          src={company.src}
+          fill
+          style={{ objectFit: "contain" }}
+          alt={company.alt || "company logo"}
+        />
+      </div>
+    );
+
+    if (company.href) {
+      return (
+        <a
+          key={`${prefix}-${index}`}
+          href={company.href}
+          rel="nofollow"
+          target="_blank"
+          className="cursor-pointer"
+        >
+          {content}
+        </a>
+      );
+    }
+
+    return (
+      <div key={`${prefix}-${index}`} className="cursor-pointer">
+        {content}
+      </div>
+    );
+  };
+
   return (
     <div
-      className={[styles.container, wrap == true && styles.wrap, "mt-20"].join(
-        " "
-      )}
+      className={[styles.container, wrap && styles.wrap, "mt-20"]
+        .filter(Boolean)
+        .join(" ")}
     >
       <div className={["flex gap-4", styles.animate_slide].join(" ")}>
-        <a
-          href="https://daimoon.market/"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={daimoonmarket} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a
-          href="https://app.monetunes.com/signup/602337"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={monetunes} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a nofollow className="cursor-pointer">
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={awal} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a nofollow className="cursor-pointer">
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={theorchard} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-
-        <a
-          href="https://www.omarimc.com/best-spotify-promotion-companies-how-to-legitimately-boost-plays/?wpam_id=241"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={omari} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a
-          href="https://earthweb.com/daimoon-media/"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={earthweb} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a
-          href="https://www.getplaylisted.com/post/best-spotify-promotion-services-2023-the-ultimate-list"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={getplaylisted} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a
-          href="https://musicreviewworld.com/best-spotify-pitching-service/"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image
-              src={musicreviewworld}
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </div>
-        </a>
-        <a
-          href="https://daimoon.market/"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={daimoonmarket} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a
-          href="https://app.monetunes.com/signup/602337"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={monetunes} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a nofollow className="cursor-pointer">
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={awal} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a nofollow className="cursor-pointer">
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={theorchard} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-
-        <a
-          href="https://www.omarimc.com/best-spotify-promotion-companies-how-to-legitimately-boost-plays/?wpam_id=241"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={omari} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a
-          href="https://earthweb.com/daimoon-media/"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={earthweb} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a
-          href="https://www.getplaylisted.com/post/best-spotify-promotion-services-2023-the-ultimate-list"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={getplaylisted} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-        <a
-          href="https://musicreviewworld.com/best-spotify-pitching-service/"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image
-              src={musicreviewworld}
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </div>
-        </a>
+        {repeatedCompaniesFirstRow.map((company, index) =>
+          renderCompany(company, index, "first")
+        )}
       </div>
       <div className={["flex gap-4", styles.animate_slide__reverse].join(" ")}>
-        <a
-          href="https://www.mysteryfreedom.com/post/music-promotion-services-who-is-the-best"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={mysteryfreedom} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-
-        <a
-          href="https://organicmusicpromo.com/daimoon-media-review/"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image
-              src={organicmusicpromo}
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </div>
-        </a>
-
-        <a
-          href="https://orionpromotion.com/the-top-5-best-spotify-playlist-services-by-orion?a_ref=660afd7b3cae5"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={orion} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-
-        <a
-          href="https://soundcamps.com/blog/best-spotify-pitching-service?ref=tom61"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image
-              src={soundcampaign}
-              fill
-              style={{ objectFit: "contain" }}
-              alt="Soundcampaign"
-            />
-          </div>
-        </a>
-
-        <a
-          href="https://twostorymelody.com/daimoon-media-review/"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={twostorymelody} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-
-        {/* <a
-          href="https://wealthysound.com/posts/best-music-promotion-platforms"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={wealthysound} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a> */}
-        <a
-          href="https://www.mysteryfreedom.com/post/music-promotion-services-who-is-the-best"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={mysteryfreedom} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-
-        <a
-          href="https://organicmusicpromo.com/daimoon-media-review/"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image
-              src={organicmusicpromo}
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </div>
-        </a>
-
-        <a
-          href="https://orionpromotion.com/the-top-5-best-spotify-playlist-services-by-orion?a_ref=660afd7b3cae5"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={orion} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-
-        <a
-          href="https://soundcamps.com/blog/best-spotify-pitching-service?ref=tom61"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image
-              src={soundcampaign}
-              fill
-              style={{ objectFit: "contain" }}
-              alt="Soundcampaign"
-            />
-          </div>
-        </a>
-
-        <a
-          href="https://twostorymelody.com/daimoon-media-review/"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={twostorymelody} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a>
-
-        {/* <a
-          href="https://wealthysound.com/posts/best-music-promotion-platforms"
-          nofollow
-          target="_blank"
-          className="cursor-pointer"
-        >
-          <div className="w-[200px] h-[50px] relative">
-            <Image src={wealthysound} fill style={{ objectFit: "contain" }} />
-          </div>
-        </a> */}
+        {repeatedCompaniesSecondRow.map((company, index) =>
+          renderCompany(company, index, "second")
+        )}
       </div>
     </div>
   );

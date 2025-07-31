@@ -646,78 +646,9 @@ const PaymentForm = (props) => {
     });
   };
 
-  // Test function for GTM tracking (development only)
-  const testPaymentFormGTM = () => {
-    console.log('Testing PaymentForm GTM tracking...');
-    
-    // Test checkout step completion
-    gtmPushEvent('checkout_step_completed', {
-      step_name: 'test_step',
-      step_number: 99,
-      form_data: {
-        first_name: formik.values.first_name || 'John',
-        last_name: formik.values.last_name || 'Doe', 
-        email: formik.values.email || 'test@example.com',
-        address: formik.values.address || '123 Test St',
-        city: formik.values.city || 'Test City',
-        country: formik.values.countryCode || 'NL'
-      },
-      timestamp: new Date().toISOString()
-    });
-
-    // Test payment method selection
-    gtmPushEvent('payment_method_selected', {
-      step_name: 'test_payment_method',
-      payment_method: 'Test Credit Card',
-      payment_method_id: 'test_cc',
-      order_total: 99.99,
-      timestamp: new Date().toISOString()
-    });
-
-    // Test form submission
-    gtmPushEvent('checkout_form_submitted', {
-      form_step: 'test_submission',
-      customer_info: {
-        email: formik.values.email || 'test@example.com',
-        first_name: formik.values.first_name || 'John',
-        last_name: formik.values.last_name || 'Doe'
-      },
-      order_info: {
-        total: 99.99,
-        currency: 'EUR',
-        payment_method: 'test_method'
-      },
-      timestamp: new Date().toISOString()
-    });
-
-    console.log('GTM test events sent! Check your browser console and GTM preview.');
-  };
-
+ 
   return (
     <>
-      {/* GTM Test Button - Development Only */}
-      {process.env.NODE_ENV === 'development' && (
-        <button 
-          type="button" 
-          onClick={testPaymentFormGTM}
-          style={{
-            position: 'fixed',
-            top: '50px',
-            right: '10px',
-            backgroundColor: '#28a745',
-            color: 'white',
-            padding: '8px 12px',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            zIndex: 9999,
-            fontSize: '12px'
-          }}
-        >
-          Test PaymentForm GTM
-        </button>
-      )}
-
       <motion.form onKeyDown={onKeyDown} Layout onSubmit={formik.handleSubmit}>
       <AnimatePresence>
         {breadcrumb == 'personal' && (
