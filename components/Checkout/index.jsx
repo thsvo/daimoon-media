@@ -11,6 +11,7 @@ import ShopContext from '/context/Order/shop-context';
 
 import ProductCard from '/components/ProductCard';
 import PaymentForm from '/components/PaymentForm';
+import ExpressCheckout from '/components/ExpressCheckout';
 import ImportantNotice from '/components/ImportantNotice';
 
 // Import tracking functions
@@ -639,6 +640,15 @@ const Checkout = () => {
                   ? 'Checkout: Address information'
                   : 'How would you like to pay?'}
               </h2>
+
+              {breadcrumb == 'personal' && (
+                <>
+                  <ExpressCheckout />
+                  <div className={styles.divider}>
+                    <span>or pay another way</span>
+                  </div>
+                </>
+              )}
 
               {breadcrumb == 'payment' && (
                 <span className={styles.extraCostsNotice}>

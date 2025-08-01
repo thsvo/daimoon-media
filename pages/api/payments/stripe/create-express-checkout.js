@@ -8,12 +8,13 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { amount, currency = 'EUR', method } = req.body;
+    const { amount, currency = 'EUR', method, orderId } = req.body;
 
     console.log('Creating express checkout session with data:', {
       amount,
       currency,
-      method
+      method,
+      orderId
     });
 
     // Convert amount to cents (Stripe expects amounts in smallest currency unit)
@@ -35,9 +36,18 @@ export default async function handler(req, res) {
         },
       ],
       mode: 'payment',
-      success_url: `${req.headers.origin}/thank-you?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${req.headers.origin}/thank-you?session_id=${orderId}`,
       cancel_url: `${req.headers.origin}/checkout`,
       automatic_tax: { enabled: false },
+      billing_address_collection: 'required',
+      customer_creation: 'always',
+      phone_number_collection: {
+        enabled: true,
+      },
+      metadata: {
+        orderId: orderId,
+        paymentMethod: 'stripe_checkout'
+      },
     });
 
     console.log('Stripe session created successfully:', session.id);

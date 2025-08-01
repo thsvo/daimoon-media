@@ -139,7 +139,8 @@ const ExpressCheckout = () => {
         body: JSON.stringify({
           paymentData,
           amount: price,
-          currency
+          currency,
+          orderId: context?.order?.order_id
         })
       });
 
@@ -154,20 +155,45 @@ const ExpressCheckout = () => {
   };
 
   // Stripe Link handler (redirect to Stripe)
-  const handleStripeLink = async (method) => {
+  const handleStripeLink = async () => {
     setLoading(true);
     try {
+      // Create a new order in the database first
+      const orderResponse = await fetch('/api/orders/create', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          campaigns: context?.order?.campaigns,
+          totalPriceDetails: context?.order?.totalPriceDetails,
+          // Don't include contact details - they'll come from Stripe
+        }),
+      });
+
+      if (!orderResponse.ok) {
+        throw new Error('Failed to create order');
+      }
+
+      const orderResult = await orderResponse.json();
+      if (!orderResult.success) {
+        throw new Error(orderResult.message || 'Failed to create order');
+      }
+      const orderId = orderResult.orderId;
+
+      // Create Stripe checkout session
       const res = await fetch('/api/payments/stripe/create-express-checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           amount: price,
           currency,
-          method,
+          method: 'stripe_link',
+          orderId: orderId
         }),
       });
       const data = await res.json();
-      console.log('Express Checkout Data Sent:', { amount: price, currency, method });
+      console.log('Express Checkout Data Sent:', { amount: price, currency, method: 'stripe_link' });
       if (data?.url) {
         window.location.href = data.url;
       }
@@ -195,7 +221,7 @@ const ExpressCheckout = () => {
         </button>
         <button
           className={styles.linkPay}
-          onClick={() => handleStripeLink('link')}
+          onClick={handleStripeLink}
           disabled={loading}
         >
           <span>Pay with</span>

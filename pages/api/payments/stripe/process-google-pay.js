@@ -8,11 +8,12 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { paymentData, amount, currency = 'EUR' } = req.body;
+    const { paymentData, amount, currency = 'EUR', orderId } = req.body;
 
     console.log('Processing Google Pay payment with data:', {
       amount,
       currency,
+      orderId,
       paymentData: paymentData ? 'received' : 'missing'
     });
 
@@ -33,7 +34,12 @@ export default async function handler(req, res) {
         }
       },
       confirm: true,
-      return_url: `${req.headers.origin}/thank-you`
+      return_url: `${req.headers.origin}/thank-you?session_id=${orderId}`,
+      description: `Order #${orderId}`,
+      metadata: {
+        orderId: orderId,
+        paymentMethod: 'google_pay'
+      }
     });
 
     console.log('Google Pay payment intent created:', paymentIntent.id);

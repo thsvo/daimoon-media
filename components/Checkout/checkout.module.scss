@@ -348,18 +348,40 @@
         }
       }
     }
-    .paymentForm {
-      max-width: 672px;
-      width: 70%;
-      height: 100%;
-      background-color: rgb(37, 37, 37);
-      border-radius: 10px;
-      padding: 40px;
-      position: relative;
-      @media only screen and (max-width: 768px) {
-        width: 100%;
-        padding: 20px;
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 2rem 0;
+      text-align: center;
+      
+      &::before,
+      &::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: #333;
+        margin: 0 1rem;
       }
+      
+      span {
+        color: #888;
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
+    }
+
+    .paymentForm {
+        max-width: 672px;
+        width: 70%;
+        height: 100%;
+        background-color: rgb(37, 37, 37);
+        border-radius: 10px;
+        padding: 40px;
+        position: relative;
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+          padding: 20px;
+        }
       .breadcrumb {
         cursor: pointer;
         letter-spacing: 0.428571px;
